@@ -1,0 +1,15 @@
+{
+  "name": "zxsd - SAST",
+  "dockerComposeFile": "../docker-compose.yml",
+  "service": "sast",
+  "runServices": ["sast"],
+  "workspaceFolder": "/workspace",
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "ms-vscode.cpptools",
+        "openai.chatgpt"
+      ]
+    }
+  }
+}

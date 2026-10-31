@@ -1,0 +1,7 @@
+/**
+ * @addtogroup ndef
+ * @details
+ * Decode, validate and encode NDEF messages using caller-owned buffers.
+ * Typed record codecs and tag TLV helpers extend the core API.
+ * Enable CONFIG_ZNDEF in the Zephyr application configuration.
+ */

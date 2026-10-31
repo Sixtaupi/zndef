@@ -1,0 +1,16 @@
+{
+  "name": "zxsd - Zephyr development",
+  "dockerComposeFile": "docker-compose.yml",
+  "service": "dev_zephyr",
+  "runServices": ["dev_zephyr"],
+  "workspaceFolder": "/workspace",
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "ms-vscode.cpptools",
+        "ms-vscode.cmake-tools"
+      ]
+    }
+  },
+  "postCreateCommand": "cd /workspace/zndef && west init -l && west update"
+}
