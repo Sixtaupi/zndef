@@ -1,0 +1,16 @@
+services:
+  dev_zephyr:
+    image: ghcr.io/zephyrproject-rtos/ci:0.29.4@sha256:a153979984288133a478adc0bfe1081d2e1c77c2db62e9f9e48a143090913788
+    volumes:
+      - ../..:/workspace
+    working_dir: /workspace
+    command: sleep infinity
+
+  sast:
+    build:
+      context: ../tools/docker/cppcheck
+      dockerfile: Dockerfile
+    volumes:
+      - ..:/workspace
+    working_dir: /workspace
+    command: sleep infinity

@@ -1,0 +1,10 @@
+build*/
+twister-out*/
+.DS_Store
+*.ctu-info
+*.dump
+doc/_build_sphinx/
+doc/__pycache__/
+doc/_extensions/__pycache__/
+doc/*.pdf
+*.pyc

@@ -1,0 +1,77 @@
+# Copyright (c) 2026 Romain Pelletant
+# SPDX-License-Identifier: Apache-2.0
+
+menuconfig ZNDEF
+	bool "NFC Data Exchange Format (NDEF) library"
+	help
+	  Encoder, decoder and validator for NFC Forum NDEF messages, with the
+	  common Record Type Definitions. The library never allocates memory:
+	  decoding is zero copy and encoding writes into caller buffers.
+
+if ZNDEF
+
+config ZNDEF_RTD_TEXT
+	bool "Text record (RTD-Text)"
+	default y
+	help
+	  Well-known type "T": UTF-8 or UTF-16 text with a language code.
+
+config ZNDEF_RTD_URI
+	bool "URI record (RTD-URI)"
+	default y
+	help
+	  Well-known type "U": URI with the abbreviation table.
+
+config ZNDEF_RTD_SP
+	bool "Smart Poster record (RTD-SP)"
+	default y
+	select ZNDEF_RTD_TEXT
+	select ZNDEF_RTD_URI
+	help
+	  Well-known type "Sp": URI with titles, action, size, type and icons.
+
+config ZNDEF_RTD_SIG
+	bool "Signature record (RTD-Sig)"
+	default y
+	help
+	  Well-known type "Sig", versions 1.0 and 2.0. Cryptography is left
+	  to the application.
+
+config ZNDEF_RTD_HANDOVER
+	bool "Connection Handover records"
+	default y
+	help
+	  Well-known types "Hr", "Hs", "Hm", "Hi", "Hc" and the local types
+	  "ac", "cr" and "err".
+
+config ZNDEF_RTD_DI
+	bool "Device Information record"
+	default y
+	help
+	  Well-known type "Di".
+
+config ZNDEF_VALIDATE_RTD
+	bool "Payload validation of well-known records"
+	default y
+	help
+	  Lets ndef_msg_validate() check, with the NDEF_VALIDATE_RTD flag, the
+	  payload of the well-known records whose RTD is enabled above
+	  (including the nested messages of Smart Poster and Handover
+	  records). When disabled, requesting NDEF_VALIDATE_RTD fails with
+	  -ENOTSUP and the dispatch code is left out of the image.
+
+config ZNDEF_ITEMS
+	bool "Declarative message encoding"
+	default y
+	help
+	  ndef_items_encode(): encode a message described by a table of
+	  items (NDEF_ITEM_TEXT(), NDEF_ITEM_URI(), NDEF_ITEM_SP(), ...).
+
+config ZNDEF_TLV
+	bool "Tag TLV blocks"
+	default y
+	help
+	  NDEF Message, Lock Control, Memory Control, Proprietary, NULL and
+	  Terminator TLVs of NFC Forum Type 1, 2 and 5 tags.
+
+endif # ZNDEF

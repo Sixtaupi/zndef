@@ -1,0 +1,3643 @@
+{
+  "scope": "Executable requirements/API evidence; not NFC Forum certification.",
+  "environment": {
+    "os": "Linux",
+    "zephyr_version": "v4.5.0",
+    "toolchain": "zephyr/gnu",
+    "commit_date": "2026-10-28T13:40:47-07:00",
+    "run_date": "2026-10-31T23:49:42+00:00",
+    "options": {
+      "help": null,
+      "zephyr_base": null,
+      "quiet": 0,
+      "command": "twister",
+      "testsuite_root": [
+        "/workspace/zndef/tests",
+        "/workspace/zndef/samples"
+      ],
+      "platform": [
+        "qemu_x86",
+        "qemu_cortex_m3"
+      ],
+      "inline_logs": true,
+      "outdir": "/tmp/zndef-misra-twister"
+    }
+  },
+  "report_sha256": "9435d831ba34b5a8c5dfe8e8c16ae267d8cc26485ea6cc9b931b3b0c17ca025a",
+  "snapshot_captured_at": "2026-10-31T23:49:41.923539+00:00",
+  "inputs_sha256": {
+    "include/ndef/items.h": "da4c6d78868c8dd901cd3c4614f379c1579d45f95a6e8ae12f08cd9da52e706a",
+    "include/ndef/ndef.h": "943373d4ce9c36ee81dba362e8d9226d6651d9d659ae5b4ec1f811d50a24adb5",
+    "include/ndef/rtd_di.h": "fa099a586837f5ab150f41eaa03759d281e0e0d5d685ac5bf70b0a4633d5187b",
+    "include/ndef/rtd_handover.h": "d00ec39c14a130fd3a342d1d5f625605add9f7601c802668f5a167c4c4002e00",
+    "include/ndef/rtd_sig.h": "603f0fd0884d9ca550769c41e2f1a5b077ce4acdade841277287f7ab53db5fff",
+    "include/ndef/rtd_sp.h": "ab661cddd439b163fecbd80768f702f824058c1785e83429072cde35336178b2",
+    "include/ndef/rtd_text.h": "a5f4b2fa482e07e30ece120f8c8e686f685855cd0cb86d684d6c8ac5d91fc763",
+    "include/ndef/rtd_uri.h": "913b14b9d6ecd83b19f55126c7946bfea00e36a689969bb8bc85569a5f28e15d",
+    "include/ndef/tlv.h": "d4fd599aaf05cd9f1a1fcc937e3ed0fe8cc3dd99ba3d829a119736ffdadf5d35",
+    "src/ndef.c": "e1693badf561752e2b3e7d165fad1968315b99f9425b3969b185836da3f67ae4",
+    "src/ndef_items.c": "0be5b4c1112074fa35999095b7dfc18f67667e8fc0d425e823d8a94939e7e4aa",
+    "src/ndef_priv.h": "4b0401e578597412e5c80d7735c465cc2f9796163167427b59e7d20d723bcd66",
+    "src/ndef_type.c": "d02db6fedd1b73e0dd964dbdb0f7ba17dfa683f262213627b3c0305416adf2bf",
+    "src/ndef_validate.c": "65f34427a9f429e97af46f0a8d472603f3a599b5f85afc0ecf109f9d264ab298",
+    "src/ndef_writer.c": "a6bd666e36190253a033befef2aa23c15ff3867dd0737ab556603583e56412c2",
+    "src/rtd_di.c": "88a5984efd13936fdc47f95587695302b4d50ccdc91f834f836f1964ff7a7a3b",
+    "src/rtd_handover.c": "d56cff6f7bb453684b2399f87bb52a492da15ab0c5e3febb10027d839d5e394c",
+    "src/rtd_sig.c": "5490720cce862272cc7c4cac50e9bf610dfe671138f6aa14a825b30f7b3acff9",
+    "src/rtd_sp.c": "ad160ac7e7778c2835da34c23541c6a6beafe64259a6094cbac116abda6faf8c",
+    "src/rtd_text.c": "8a47126dbebe724ea860a1926de197fe58dfa2e21bc98fb42153b679f1e87b6b",
+    "src/rtd_uri.c": "a6870692ab11b711763ceedd9ee4ea2111474840a730fea90cc2b240790dc0bb",
+    "src/tlv.c": "1f5e6a666c8deaf34f698fb371e91ae77af9f4d0d887aea1a2cb4d5542c67b8d",
+    "tests/CONFORMANCE.md": "b082773d707fed488e2c25e55619d315cc8ca667e5f9a0bd80d8ca3ee86ee4b6",
+    "tests/features/CMakeLists.txt": "93e11ab1c1c702a4435da94dd039305ad9e47d65a77d071aad13e04ca6438061",
+    "tests/features/prj.conf": "8d1adddb40d1f82e1fdc781b0ab5092c9ed3b0bb6de6d24a0a9d6ef323af6420",
+    "tests/features/src/test_features.c": "c7b9b623ac8ee22f693cb4e4ed33908590f7769fea751df29f2f553454865fb2",
+    "tests/features/testcase.yaml": "805445c4e85ab318fbbd7140a98efb68993925ce2ec145336ac650820996ded6",
+    "tests/ndef/CMakeLists.txt": "df5cffd99b8e754557dec63a0962491e097fcc4c821c5a2cad736c8421a69a89",
+    "tests/ndef/Kconfig": "246f8464f634604dc9183a049a3939e47ef7a93532f517c93d6a66307694facb",
+    "tests/ndef/prj.conf": "8d1adddb40d1f82e1fdc781b0ab5092c9ed3b0bb6de6d24a0a9d6ef323af6420",
+    "tests/ndef/src/test_api_contracts.c": "4e861bd0f5440e434e7cd74eb53c71544e8c9dd285b34e8a5948dc525e941334",
+    "tests/ndef/src/test_core.c": "25399621b943eae6a92ca48ca1de141f79a50c6469467b1ec36188b831ed85f2",
+    "tests/ndef/src/test_items.c": "f53eeb48280400bb3497c37addea66fbaa2dfc8898f482e4c655aff71a31d177",
+    "tests/ndef/src/test_rtd.c": "4955001a3dae81b78498e599ca2456764cb4f22a876e19d16de2d2cddf09aa7d",
+    "tests/ndef/src/test_spec_ndef.c": "473a14200eaa6377f70420a35f07b1e95e6b0100a36baad4f11f94b6d9a33778",
+    "tests/ndef/src/test_spec_rtd.c": "5fe45192fe8109dd36e2ef3d4919ce26d79b8a75e9b7e73281de8ca47b32388a",
+    "tests/ndef/src/test_spec_sp.c": "efd5bfc2f9314667f818ed42741f1d6ba3ecbf6f4657437c1b0f5474674f0168",
+    "tests/ndef/src/test_spec_text.c": "95876eab4ecf5420587ac7d84c981c4925a287bd7ccc2b354aeba179a571fb34",
+    "tests/ndef/src/test_spec_uri.c": "e34d93de7978448acb5fad9d775236f3079a3f6201ad79bf2a936102cf55d8cb",
+    "tests/ndef/src/test_tlv_fuzz.c": "b257964571e03110c8d66bb2576ebea3cc7a654292c581987d0d0f4a901a0e98",
+    "tests/ndef/src/test_validate.c": "6b3f4e83a8f0fc2ea95f94d369e4720d5640dc58912970421189a326c32bcbcf",
+    "tests/ndef/src/test_writer.c": "7479833a47ea286ff29c7f12969087e93760678427a38ad30ca35493f86c8499",
+    "tests/ndef/testcase.yaml": "e477ba82980107faa012e53a3c79c7fbc15866a575ba885a87d7ed52b2393c92",
+    "tests/run_conformance.sh": "58dadcd0ef5f7614bf322dbb38f39cf466c14c8eea2f8325746831efec811370",
+    "tests/scripts/build_evidence.py": "307079ed2bedbd7c12ac03e73292a3ec469fb346f45de391d99098a6d7e1913b",
+    "doc/NFC-Data-Exchange-Format-NDEF.pdf": "26c68017db3c534f25552322f0925db5e96eaef9c7829ddd0862d41ff7ed8840",
+    "doc/NFCForum-SmartPoster_RTD_1.0.pdf": "b9e6455a3ca1c965975743c1eff5e68d55bcdd67224ec90c00f2872f1c75f7b1",
+    "doc/NFCForum-TS-NDEF_1.0.pdf": "26c68017db3c534f25552322f0925db5e96eaef9c7829ddd0862d41ff7ed8840",
+    "doc/NFCForum-TS-RTD_1.0.pdf": "eff36538746250205e77fceef291e1b693115ce0c12ba787e1724502a87c50a8",
+    "doc/NFCForum-TS-RTD_Text_1.0.pdf": "934153cabaa887726cf5c4b1f551f6bd4ea3902e507d650349f5d9a329c96535",
+    "doc/NFCForum-TS-RTD_URI_1.0.pdf": "f4a5aeb53cfe96dee24dcc969b7e30c07e5296b97bb9b545025bc35af51b3b56",
+    "doc/misra-required.md": "812785237de3635037c0610b80627f009e53aede101b3ee985af16d5a1ef2b5f",
+    "CMakeLists.txt": "a56382bacaf9e746a49b13455ef1f80e3ef941e5bc326e2392ddd2aa0445a1aa",
+    "Kconfig": "0262efe64678dc501510b7ce84e436ce0582d68a9260e9587b863b9c7c98db8c"
+  },
+  "counts": {
+    "source_tests": 145,
+    "matrix_test_references": 95,
+    "public_functions": 82,
+    "configurations": 12,
+    "testcase_statuses": {
+      "passed": 346,
+      "not run": 2
+    }
+  },
+  "requirements_tests": [
+    "ndef_api.test_alternative_carrier_payload_encoding",
+    "ndef_api.test_finish_is_observational_and_writer_recovers",
+    "ndef_api.test_items_keep_successful_prefix_on_error",
+    "ndef_api.test_optional_decoders_reject_every_truncation",
+    "ndef_api.test_payload_ranges_cross_chunk_headers",
+    "ndef_api.test_signature_data_propagates_callback_error",
+    "ndef_api.test_signature_parser_checks_type_and_chunk_state",
+    "ndef_api.test_tlv_length_boundaries_and_output_bounds",
+    "ndef_core.test_id_validate",
+    "ndef_core.test_type_validate",
+    "ndef_core.test_validate_id",
+    "ndef_features.test_core_remains_available",
+    "ndef_features.test_items_report_disabled_record_kinds",
+    "ndef_rtd.test_validate_nested_chunks_report_unsupported",
+    "ndef_rtd.test_validate_rtd",
+    "ndef_spec.test_all_header_flag_combinations",
+    "ndef_spec.test_chunk_forbidden_message_flags",
+    "ndef_spec.test_chunk_writer_wire_and_logical_view",
+    "ndef_spec.test_extreme_declared_lengths_are_bounded",
+    "ndef_spec.test_max_type_and_id_lengths",
+    "ndef_spec.test_mixed_short_normal_message",
+    "ndef_spec.test_nested_message_wire_and_opaque_payload",
+    "ndef_spec.test_normal_short_field_order",
+    "ndef_spec.test_tnf_forbidden_fields",
+    "ndef_spec.test_tnf_wire_matrix",
+    "ndef_spec.test_writer_payload_size_boundaries",
+    "ndef_spec.test_zero_length_chunks_and_il_restriction",
+    "ndef_spec_sp.test_action_payload_length",
+    "ndef_spec_sp.test_action_values_and_reserved_values",
+    "ndef_spec_sp.test_appendix_a1_exact_octets",
+    "ndef_spec_sp.test_appendix_a2_long_and_short_records",
+    "ndef_spec_sp.test_chunked_icon_payload_access",
+    "ndef_spec_sp.test_chunked_uri_reports_implementation_limit",
+    "ndef_spec_sp.test_distinct_languages_and_exact_lookup",
+    "ndef_spec_sp.test_duplicate_optional_metadata_policy",
+    "ndef_spec_sp.test_duplicate_title_language_case_insensitive",
+    "ndef_spec_sp.test_invalid_mime_prefix_is_not_an_icon",
+    "ndef_spec_sp.test_malformed_title_payload",
+    "ndef_spec_sp.test_malformed_type_payload",
+    "ndef_spec_sp.test_metadata_before_uri",
+    "ndef_spec_sp.test_multiple_image_and_video_icons",
+    "ndef_spec_sp.test_nested_message_flags_and_truncations",
+    "ndef_spec_sp.test_nested_message_must_consume_payload",
+    "ndef_spec_sp.test_outer_type_name",
+    "ndef_spec_sp.test_reserved_tnf_extra_is_opaque_to_reader",
+    "ndef_spec_sp.test_size_network_order_and_boundaries",
+    "ndef_spec_sp.test_size_requires_four_octets",
+    "ndef_spec_sp.test_type_length_and_mime_parameters",
+    "ndef_spec_sp.test_unknown_and_nested_extra_records",
+    "ndef_spec_sp.test_unknown_chunked_extra_is_ignored",
+    "ndef_spec_sp.test_uri_cardinality",
+    "ndef_spec_sp.test_writer_matches_appendix_a1",
+    "ndef_spec_sp.test_writer_metadata_matches_independent_octets",
+    "ndef_spec_text.test_appendix_a_canonical_octets",
+    "ndef_spec_text.test_conversion_capacity_empty_bom_and_invalid_encoding",
+    "ndef_spec_text.test_display_policy_does_not_rewrite_payload",
+    "ndef_spec_text.test_invalid_utf16_is_rejected_before_conversion",
+    "ndef_spec_text.test_invalid_utf8_is_rejected",
+    "ndef_spec_text.test_language_length_and_payload_bounds",
+    "ndef_spec_text.test_language_syntax_in_both_directions",
+    "ndef_spec_text.test_line_breaks_require_crlf",
+    "ndef_spec_text.test_record_type_chunking_and_invalid_arguments",
+    "ndef_spec_text.test_status_rfu_is_ignored_and_never_written",
+    "ndef_spec_text.test_utf16_bom_endianness_and_surrogate_boundaries",
+    "ndef_spec_text.test_utf8_scalar_boundaries_and_octet_length",
+    "ndef_spec_uri.test_all_abbreviation_table_entries",
+    "ndef_spec_uri.test_all_rfu_codes_are_no_prefix",
+    "ndef_spec_uri.test_appendix_a_canonical_octets",
+    "ndef_spec_uri.test_every_c0_control_discards_record",
+    "ndef_spec_uri.test_framing_empty_fields_and_capacity",
+    "ndef_spec_uri.test_invalid_utf8_discards_record",
+    "ndef_spec_uri.test_longest_prefix_selection_and_case_preservation",
+    "ndef_spec_uri.test_no_substitution_is_valid_with_known_scheme",
+    "ndef_spec_uri.test_record_type_chunking_and_invalid_arguments",
+    "ndef_spec_uri.test_unicode_iri_is_preserved_as_utf8",
+    "ndef_validate.test_chunked_text_requires_scratch",
+    "ndef_validate.test_chunked_text_small_scratch",
+    "ndef_validate.test_chunked_text_with_scratch",
+    "ndef_validate.test_malformed_chunked_payload",
+    "ndef_validate.test_opaque_chunked_payloads_need_no_scratch",
+    "ndef_validate.test_scratch_arguments",
+    "ndef_validate.test_scratch_reused_between_records",
+    "ndef_validate.test_unsupported_rtd_versions",
+    "ndef_writer.test_invalid_desc",
+    "rtd_spec.test_binary_encoding_examples",
+    "rtd_spec.test_external_ascii_alphabet_exhaustive",
+    "rtd_spec.test_external_equivalence",
+    "rtd_spec.test_external_percent_encoding_utf8",
+    "rtd_spec.test_external_required_parts",
+    "rtd_spec.test_global_local_classification",
+    "rtd_spec.test_illegal_type_diagnostic_and_application_filter",
+    "rtd_spec.test_unknown_types_do_not_block_known_record_lookup",
+    "rtd_spec.test_well_known_ascii_alphabet_exhaustive",
+    "rtd_spec.test_well_known_equivalence",
+    "rtd_spec.test_well_known_percent_encoding_forbidden"
+  ],
+  "tests": {
+    "ndef_features.test_core_remains_available": {
+      "source": "tests/features/src/test_features.c",
+      "line": 11,
+      "executions": [
+        {
+          "scenario": "libraries.zndef.features.validation_disabled",
+          "platform": "qemu_cortex_m3/ti_lm3s6965",
+          "status": "passed"
+        },
+        {
+          "scenario": "libraries.zndef.features.validation_disabled",
+          "platform": "qemu_x86/atom",
+          "status": "passed"
+        },
+        {
+          "scenario": "libraries.zndef.features.opaque_rtds",
+          "platform": "qemu_cortex_m3/ti_lm3s6965",
+          "status": "passed"
+        },
+        {
+          "scenario": "libraries.zndef.features.opaque_rtds",
+          "platform": "qemu_x86/atom",
+          "status": "passed"
+        },
+        {
+          "scenario": "libraries.zndef.features.core_only",
+          "platform": "qemu_cortex_m3/ti_lm3s6965",
+          "status": "passed"
+        },
+        {
+          "scenario": "libraries.zndef.features.core_only",
+          "platform": "qemu_x86/atom",
+          "status": "passed"
+        }
+      ]
+    },
+    "ndef_features.test_items_report_disabled_record_kinds": {
+      "source": "tests/features/src/test_features.c",
+      "line": 33,
+      "executions": [
+        {
+          "scenario": "libraries.zndef.features.validation_disabled",
+          "platform": "qemu_cortex_m3/ti_lm3s6965",
+          "status": "passed"
+        },
+        {
+          "scenario": "libraries.zndef.features.validation_disabled",
+          "platform": "qemu_x86/atom",
+          "status": "passed"
+        },
+        {
+          "scenario": "libraries.zndef.features.opaque_rtds",
+          "platform": "qemu_cortex_m3/ti_lm3s6965",
+          "status": "passed"
+        },
+        {
+          "scenario": "libraries.zndef.features.opaque_rtds",
+          "platform": "qemu_x86/atom",
+          "status": "passed"
+        }
+      ]
+    },
+    "ndef_api.test_finish_is_observational_and_writer_recovers": {
+      "source": "tests/ndef/src/test_api_contracts.c",
+      "line": 19,
+      "executions": [
+        {
+          "scenario": "libraries.zndef",
+          "platform": "qemu_cortex_m3/ti_lm3s6965",
+          "status": "passed"
+        },
+        {
+          "scenario": "libraries.zndef",
+          "platform": "qemu_x86/atom",
+          "status": "passed"
+        }
+      ]
+    },
+    "ndef_api.test_payload_ranges_cross_chunk_headers": {
+      "source": "tests/ndef/src/test_api_contracts.c",
+      "line": 52,
+      "executions": [
+        {
+          "scenario": "libraries.zndef",
+          "platform": "qemu_cortex_m3/ti_lm3s6965",
+          "status": "passed"
+        },
+        {
+          "scenario": "libraries.zndef",
+          "platform": "qemu_x86/atom",
+          "status": "passed"
+        }
+      ]
+    },
+    "ndef_api.test_items_keep_successful_prefix_on_error": {
+      "source": "tests/ndef/src/test_api_contracts.c",
+      "line": 84,
+      "executions": [
+        {
+          "scenario": "libraries.zndef",
+          "platform": "qemu_cortex_m3/ti_lm3s6965",
+          "status": "passed"
+        },
+        {
+          "scenario": "libraries.zndef",
+          "platform": "qemu_x86/atom",
+          "status": "passed"
+        }
+      ]
+    },
+    "ndef_api.test_alternative_carrier_payload_encoding": {
+      "source": "tests/ndef/src/test_api_contracts.c",
+      "line": 109,
+      "executions": [
+        {
+          "scenario": "libraries.zndef",
+          "platform": "qemu_cortex_m3/ti_lm3s6965",
+          "status": "passed"
+        },
+        {
+          "scenario": "libraries.zndef",
+          "platform": "qemu_x86/atom",
+          "status": "passed"
+        }
+      ]
+    },
+    "ndef_api.test_tlv_length_boundaries_and_output_bounds": {
+      "source": "tests/ndef/src/test_api_contracts.c",
+      "line": 140,
+      "executions": [
+        {
+          "scenario": "libraries.zndef",
+          "platform": "qemu_cortex_m3/ti_lm3s6965",
+          "status": "passed"
+        },
+        {
+          "scenario": "libraries.zndef",
+          "platform": "qemu_x86/atom",
+          "status": "passed"
+        }
+      ]
+    },
+    "ndef_api.test_optional_decoders_reject_every_truncation": {
+      "source": "tests/ndef/src/test_api_contracts.c",
+      "line": 174,
+      "executions": [
+        {
+          "scenario": "libraries.zndef",
+          "platform": "qemu_cortex_m3/ti_lm3s6965",
+          "status": "passed"
+        },
+        {
+          "scenario": "libraries.zndef",
+          "platform": "qemu_x86/atom",
+          "status": "passed"
+        }
+      ]
+    },
+    "ndef_api.test_signature_data_propagates_callback_error": {
+      "source": "tests/ndef/src/test_api_contracts.c",
+      "line": 202,
+      "executions": [
+        {
+          "scenario": "libraries.zndef",
+          "platform": "qemu_cortex_m3/ti_lm3s6965",
+          "status": "passed"
+        },
+        {
+          "scenario": "libraries.zndef",
+          "platform": "qemu_x86/atom",
+          "status": "passed"
+        }
+      ]
+    },
+    "ndef_api.test_signature_parser_checks_type_and_chunk_state": {
+      "source": "tests/ndef/src/test_api_contracts.c",
+      "line": 215,
+      "executions": [
+        {
+          "scenario": "libraries.zndef",
+          "platform": "qemu_cortex_m3/ti_lm3s6965",
+          "status": "passed"
+        },
+        {
+          "scenario": "libraries.zndef",
+          "platform": "qemu_x86/atom",
+          "status": "passed"
+        }
+      ]
+    },
+    "ndef_core.test_decode_short_record": {
+      "source": "tests/ndef/src/test_core.c",
+      "line": 30,
+      "executions": [
+        {
+          "scenario": "libraries.zndef",
+          "platform": "qemu_cortex_m3/ti_lm3s6965",
+          "status": "passed"
+        },
+        {
+          "scenario": "libraries.zndef",
+          "platform": "qemu_x86/atom",
+          "status": "passed"
+        }
+      ]
+    },
+    "ndef_core.test_decode_long_record": {
+      "source": "tests/ndef/src/test_core.c",
+      "line": 46,
+      "executions": [
+        {
+          "scenario": "libraries.zndef",
+          "platform": "qemu_cortex_m3/ti_lm3s6965",
+          "status": "passed"
+        },
+        {
+          "scenario": "libraries.zndef",
+          "platform": "qemu_x86/atom",
+          "status": "passed"
+        }
+      ]
+    },
+    "ndef_core.test_iterate_two_records": {
+      "source": "tests/ndef/src/test_core.c",
+      "line": 60,
+      "executions": [
+        {
+          "scenario": "libraries.zndef",
+          "platform": "qemu_cortex_m3/ti_lm3s6965",
+          "status": "passed"
+        },
+        {
+          "scenario": "libraries.zndef",
+          "platform": "qemu_x86/atom",
+          "status": "passed"
+        }
+      ]
+    },
+    "ndef_core.test_every_truncation_fails": {
+      "source": "tests/ndef/src/test_core.c",
+      "line": 85,
+      "executions": [
+        {
+          "scenario": "libraries.zndef",
+          "platform": "qemu_cortex_m3/ti_lm3s6965",
+          "status": "passed"
+        },
+        {
+          "scenario": "libraries.zndef",
+          "platform": "qemu_x86/atom",
+          "status": "passed"
+        }
+      ]
+    },
+    "ndef_core.test_trailing_octets": {
+      "source": "tests/ndef/src/test_core.c",
+      "line": 92,
+      "executions": [
+        {
+          "scenario": "libraries.zndef",
+          "platform": "qemu_cortex_m3/ti_lm3s6965",
+          "status": "passed"
+        },
+        {
+          "scenario": "libraries.zndef",
+          "platform": "qemu_x86/atom",
+          "status": "passed"
+        }
+      ]
+    },
+    "ndef_core.test_message_flags": {
+      "source": "tests/ndef/src/test_core.c",
+      "line": 107,
+      "executions": [
+        {
+          "scenario": "libraries.zndef",
+          "platform": "qemu_cortex_m3/ti_lm3s6965",
+          "status": "passed"
+        },
+        {
+          "scenario": "libraries.zndef",
+          "platform": "qemu_x86/atom",
+          "status": "passed"
+        }
+      ]
+    },
+    "ndef_core.test_tnf_rules": {
+      "source": "tests/ndef/src/test_core.c",
+      "line": 137,
+      "executions": [
+        {
+          "scenario": "libraries.zndef",
+          "platform": "qemu_cortex_m3/ti_lm3s6965",
+          "status": "passed"
+        },
+        {
+          "scenario": "libraries.zndef",
+          "platform": "qemu_x86/atom",
+          "status": "passed"
+        }
+      ]
+    },
+    "ndef_core.test_reserved_tnf_is_unknown": {
+      "source": "tests/ndef/src/test_core.c",
+      "line": 165,
+      "executions": [
+        {
+          "scenario": "libraries.zndef",
+          "platform": "qemu_cortex_m3/ti_lm3s6965",
+          "status": "passed"
+        },
+        {
+          "scenario": "libraries.zndef",
+          "platform": "qemu_x86/atom",
+          "status": "passed"
+        }
+      ]
+    },
+    "ndef_core.test_chunked_record": {
+      "source": "tests/ndef/src/test_core.c",
+      "line": 190,
+      "executions": [
+        {
+          "scenario": "libraries.zndef",
+          "platform": "qemu_cortex_m3/ti_lm3s6965",
+          "status": "passed"
+        },
+        {
+          "scenario": "libraries.zndef",
+          "platform": "qemu_x86/atom",
+          "status": "passed"
+        }
+      ]
+    },
+    "ndef_core.test_chunk_rules": {
+      "source": "tests/ndef/src/test_core.c",
+      "line": 223,
+      "executions": [
+        {
+          "scenario": "libraries.zndef",
+          "platform": "qemu_cortex_m3/ti_lm3s6965",
+          "status": "passed"
+        },
+        {
+          "scenario": "libraries.zndef",
+          "platform": "qemu_x86/atom",
+          "status": "passed"
+        }
+      ]
+    },
+    "ndef_core.test_huge_length": {
+      "source": "tests/ndef/src/test_core.c",
+      "line": 278,
+      "executions": [
+        {
+          "scenario": "libraries.zndef",
+          "platform": "qemu_cortex_m3/ti_lm3s6965",
+          "status": "passed"
+        },
+        {
+          "scenario": "libraries.zndef",
+          "platform": "qemu_x86/atom",
+          "status": "passed"
+        }
+      ]
+    },
+    "ndef_core.test_type_eq": {
+      "source": "tests/ndef/src/test_core.c",
+      "line": 288,
+      "executions": [
+        {
+          "scenario": "libraries.zndef",
+          "platform": "qemu_cortex_m3/ti_lm3s6965",
+          "status": "passed"
+        },
+        {
+          "scenario": "libraries.zndef",
+          "platform": "qemu_x86/atom",
+          "status": "passed"
+        }
+      ]
+    },
+    "ndef_core.test_type_validate": {
+      "source": "tests/ndef/src/test_core.c",
+      "line": 311,
+      "executions": [
+        {
+          "scenario": "libraries.zndef",
+          "platform": "qemu_cortex_m3/ti_lm3s6965",
+          "status": "passed"
+        },
+        {
+          "scenario": "libraries.zndef",
+          "platform": "qemu_x86/atom",
+          "status": "passed"
+        }
+      ]
+    },
+    "ndef_core.test_id_validate": {
+      "source": "tests/ndef/src/test_core.c",
+      "line": 380,
+      "executions": [
+        {
+          "scenario": "libraries.zndef",
+          "platform": "qemu_cortex_m3/ti_lm3s6965",
+          "status": "passed"
+        },
+        {
+          "scenario": "libraries.zndef",
+          "platform": "qemu_x86/atom",
+          "status": "passed"
+        }
+      ]
+    },
+    "ndef_core.test_validate_id": {
+      "source": "tests/ndef/src/test_core.c",
+      "line": 401,
+      "executions": [
+        {
+          "scenario": "libraries.zndef",
+          "platform": "qemu_cortex_m3/ti_lm3s6965",
+          "status": "passed"
+        },
+        {
+          "scenario": "libraries.zndef",
+          "platform": "qemu_x86/atom",
+          "status": "passed"
+        }
+      ]
+    },
+    "ndef_core.test_wkt_local": {
+      "source": "tests/ndef/src/test_core.c",
+      "line": 411,
+      "executions": [
+        {
+          "scenario": "libraries.zndef",
+          "platform": "qemu_cortex_m3/ti_lm3s6965",
+          "status": "passed"
+        },
+        {
+          "scenario": "libraries.zndef",
+          "platform": "qemu_x86/atom",
+          "status": "passed"
+        }
+      ]
+    },
+    "ndef_core.test_find": {
+      "source": "tests/ndef/src/test_core.c",
+      "line": 419,
+      "executions": [
+        {
+          "scenario": "libraries.zndef",
+          "platform": "qemu_cortex_m3/ti_lm3s6965",
+          "status": "passed"
+        },
+        {
+          "scenario": "libraries.zndef",
+          "platform": "qemu_x86/atom",
+          "status": "passed"
+        }
+      ]
+    },
+    "ndef_core.test_utf8": {
+      "source": "tests/ndef/src/test_core.c",
+      "line": 434,
+      "executions": [
+        {
+          "scenario": "libraries.zndef",
+          "platform": "qemu_cortex_m3/ti_lm3s6965",
+          "status": "passed"
+        },
+        {
+          "scenario": "libraries.zndef",
+          "platform": "qemu_x86/atom",
+          "status": "passed"
+        }
+      ]
+    },
+    "ndef_core.test_invalid_args": {
+      "source": "tests/ndef/src/test_core.c",
+      "line": 448,
+      "executions": [
+        {
+          "scenario": "libraries.zndef",
+          "platform": "qemu_cortex_m3/ti_lm3s6965",
+          "status": "passed"
+        },
+        {
+          "scenario": "libraries.zndef",
+          "platform": "qemu_x86/atom",
+          "status": "passed"
+        }
+      ]
+    },
+    "ndef_items.test_same_octets_as_writer": {
+      "source": "tests/ndef/src/test_items.c",
+      "line": 35,
+      "executions": [
+        {
+          "scenario": "libraries.zndef",
+          "platform": "qemu_cortex_m3/ti_lm3s6965",
+          "status": "passed"
+        },
+        {
+          "scenario": "libraries.zndef",
+          "platform": "qemu_x86/atom",
+          "status": "passed"
+        }
+      ]
+    },
+    "ndef_items.test_mixed_with_writer": {
+      "source": "tests/ndef/src/test_items.c",
+      "line": 65,
+      "executions": [
+        {
+          "scenario": "libraries.zndef",
+          "platform": "qemu_cortex_m3/ti_lm3s6965",
+          "status": "passed"
+        },
+        {
+          "scenario": "libraries.zndef",
+          "platform": "qemu_x86/atom",
+          "status": "passed"
+        }
+      ]
+    },
+    "ndef_items.test_errors": {
+      "source": "tests/ndef/src/test_items.c",
+      "line": 82,
+      "executions": [
+        {
+          "scenario": "libraries.zndef",
+          "platform": "qemu_cortex_m3/ti_lm3s6965",
+          "status": "passed"
+        },
+        {
+          "scenario": "libraries.zndef",
+          "platform": "qemu_x86/atom",
+          "status": "passed"
+        }
+      ]
+    },
+    "ndef_rtd.test_text_utf8": {
+      "source": "tests/ndef/src/test_rtd.c",
+      "line": 34,
+      "executions": [
+        {
+          "scenario": "libraries.zndef",
+          "platform": "qemu_cortex_m3/ti_lm3s6965",
+          "status": "passed"
+        },
+        {
+          "scenario": "libraries.zndef",
+          "platform": "qemu_x86/atom",
+          "status": "passed"
+        }
+      ]
+    },
+    "ndef_rtd.test_text_utf16": {
+      "source": "tests/ndef/src/test_rtd.c",
+      "line": 57,
+      "executions": [
+        {
+          "scenario": "libraries.zndef",
+          "platform": "qemu_cortex_m3/ti_lm3s6965",
+          "status": "passed"
+        },
+        {
+          "scenario": "libraries.zndef",
+          "platform": "qemu_x86/atom",
+          "status": "passed"
+        }
+      ]
+    },
+    "ndef_rtd.test_text_malformed": {
+      "source": "tests/ndef/src/test_rtd.c",
+      "line": 87,
+      "executions": [
+        {
+          "scenario": "libraries.zndef",
+          "platform": "qemu_cortex_m3/ti_lm3s6965",
+          "status": "passed"
+        },
+        {
+          "scenario": "libraries.zndef",
+          "platform": "qemu_x86/atom",
+          "status": "passed"
+        }
+      ]
+    },
+    "ndef_rtd.test_text_encode": {
+      "source": "tests/ndef/src/test_rtd.c",
+      "line": 108,
+      "executions": [
+        {
+          "scenario": "libraries.zndef",
+          "platform": "qemu_cortex_m3/ti_lm3s6965",
+          "status": "passed"
+        },
+        {
+          "scenario": "libraries.zndef",
+          "platform": "qemu_x86/atom",
+          "status": "passed"
+        }
+      ]
+    },
+    "ndef_rtd.test_text_wrong_record": {
+      "source": "tests/ndef/src/test_rtd.c",
+      "line": 155,
+      "executions": [
+        {
+          "scenario": "libraries.zndef",
+          "platform": "qemu_cortex_m3/ti_lm3s6965",
+          "status": "passed"
+        },
+        {
+          "scenario": "libraries.zndef",
+          "platform": "qemu_x86/atom",
+          "status": "passed"
+        }
+      ]
+    },
+    "ndef_rtd.test_uri_prefixes": {
+      "source": "tests/ndef/src/test_rtd.c",
+      "line": 168,
+      "executions": [
+        {
+          "scenario": "libraries.zndef",
+          "platform": "qemu_cortex_m3/ti_lm3s6965",
+          "status": "passed"
+        },
+        {
+          "scenario": "libraries.zndef",
+          "platform": "qemu_x86/atom",
+          "status": "passed"
+        }
+      ]
+    },
+    "ndef_rtd.test_uri_decode": {
+      "source": "tests/ndef/src/test_rtd.c",
+      "line": 206,
+      "executions": [
+        {
+          "scenario": "libraries.zndef",
+          "platform": "qemu_cortex_m3/ti_lm3s6965",
+          "status": "passed"
+        },
+        {
+          "scenario": "libraries.zndef",
+          "platform": "qemu_x86/atom",
+          "status": "passed"
+        }
+      ]
+    },
+    "ndef_rtd.test_sp_round_trip": {
+      "source": "tests/ndef/src/test_rtd.c",
+      "line": 249,
+      "executions": [
+        {
+          "scenario": "libraries.zndef",
+          "platform": "qemu_cortex_m3/ti_lm3s6965",
+          "status": "passed"
+        },
+        {
+          "scenario": "libraries.zndef",
+          "platform": "qemu_x86/atom",
+          "status": "passed"
+        }
+      ]
+    },
+    "ndef_rtd.test_sp_rules": {
+      "source": "tests/ndef/src/test_rtd.c",
+      "line": 291,
+      "executions": [
+        {
+          "scenario": "libraries.zndef",
+          "platform": "qemu_cortex_m3/ti_lm3s6965",
+          "status": "passed"
+        },
+        {
+          "scenario": "libraries.zndef",
+          "platform": "qemu_x86/atom",
+          "status": "passed"
+        }
+      ]
+    },
+    "ndef_rtd.test_sig_round_trip": {
+      "source": "tests/ndef/src/test_rtd.c",
+      "line": 343,
+      "executions": [
+        {
+          "scenario": "libraries.zndef",
+          "platform": "qemu_cortex_m3/ti_lm3s6965",
+          "status": "passed"
+        },
+        {
+          "scenario": "libraries.zndef",
+          "platform": "qemu_x86/atom",
+          "status": "passed"
+        }
+      ]
+    },
+    "ndef_rtd.test_sig_v1_and_uri": {
+      "source": "tests/ndef/src/test_rtd.c",
+      "line": 396,
+      "executions": [
+        {
+          "scenario": "libraries.zndef",
+          "platform": "qemu_cortex_m3/ti_lm3s6965",
+          "status": "passed"
+        },
+        {
+          "scenario": "libraries.zndef",
+          "platform": "qemu_x86/atom",
+          "status": "passed"
+        }
+      ]
+    },
+    "ndef_rtd.test_sig_covered_records": {
+      "source": "tests/ndef/src/test_rtd.c",
+      "line": 454,
+      "executions": [
+        {
+          "scenario": "libraries.zndef",
+          "platform": "qemu_cortex_m3/ti_lm3s6965",
+          "status": "passed"
+        },
+        {
+          "scenario": "libraries.zndef",
+          "platform": "qemu_x86/atom",
+          "status": "passed"
+        }
+      ]
+    },
+    "ndef_rtd.test_handover_select": {
+      "source": "tests/ndef/src/test_rtd.c",
+      "line": 501,
+      "executions": [
+        {
+          "scenario": "libraries.zndef",
+          "platform": "qemu_cortex_m3/ti_lm3s6965",
+          "status": "passed"
+        },
+        {
+          "scenario": "libraries.zndef",
+          "platform": "qemu_x86/atom",
+          "status": "passed"
+        }
+      ]
+    },
+    "ndef_rtd.test_handover_request_rules": {
+      "source": "tests/ndef/src/test_rtd.c",
+      "line": 555,
+      "executions": [
+        {
+          "scenario": "libraries.zndef",
+          "platform": "qemu_cortex_m3/ti_lm3s6965",
+          "status": "passed"
+        },
+        {
+          "scenario": "libraries.zndef",
+          "platform": "qemu_x86/atom",
+          "status": "passed"
+        }
+      ]
+    },
+    "ndef_rtd.test_handover_records": {
+      "source": "tests/ndef/src/test_rtd.c",
+      "line": 603,
+      "executions": [
+        {
+          "scenario": "libraries.zndef",
+          "platform": "qemu_cortex_m3/ti_lm3s6965",
+          "status": "passed"
+        },
+        {
+          "scenario": "libraries.zndef",
+          "platform": "qemu_x86/atom",
+          "status": "passed"
+        }
+      ]
+    },
+    "ndef_rtd.test_di_round_trip": {
+      "source": "tests/ndef/src/test_rtd.c",
+      "line": 637,
+      "executions": [
+        {
+          "scenario": "libraries.zndef",
+          "platform": "qemu_cortex_m3/ti_lm3s6965",
+          "status": "passed"
+        },
+        {
+          "scenario": "libraries.zndef",
+          "platform": "qemu_x86/atom",
+          "status": "passed"
+        }
+      ]
+    },
+    "ndef_rtd.test_validate_rtd": {
+      "source": "tests/ndef/src/test_rtd.c",
+      "line": 692,
+      "executions": [
+        {
+          "scenario": "libraries.zndef",
+          "platform": "qemu_cortex_m3/ti_lm3s6965",
+          "status": "passed"
+        },
+        {
+          "scenario": "libraries.zndef",
+          "platform": "qemu_x86/atom",
+          "status": "passed"
+        }
+      ]
+    },
+    "ndef_rtd.test_validate_nested_chunks_report_unsupported": {
+      "source": "tests/ndef/src/test_rtd.c",
+      "line": 722,
+      "executions": [
+        {
+          "scenario": "libraries.zndef",
+          "platform": "qemu_cortex_m3/ti_lm3s6965",
+          "status": "passed"
+        },
+        {
+          "scenario": "libraries.zndef",
+          "platform": "qemu_x86/atom",
+          "status": "passed"
+        }
+      ]
+    },
+    "ndef_rtd.test_unknown_nested_chunks_remain_opaque": {
+      "source": "tests/ndef/src/test_rtd.c",
+      "line": 763,
+      "executions": [
+        {
+          "scenario": "libraries.zndef",
+          "platform": "qemu_cortex_m3/ti_lm3s6965",
+          "status": "passed"
+        },
+        {
+          "scenario": "libraries.zndef",
+          "platform": "qemu_x86/atom",
+          "status": "passed"
+        }
+      ]
+    },
+    "ndef_spec.test_normal_short_field_order": {
+      "source": "tests/ndef/src/test_spec_ndef.c",
+      "line": 21,
+      "executions": [
+        {
+          "scenario": "libraries.zndef",
+          "platform": "qemu_cortex_m3/ti_lm3s6965",
+          "status": "passed"
+        },
+        {
+          "scenario": "libraries.zndef",
+          "platform": "qemu_x86/atom",
+          "status": "passed"
+        }
+      ]
+    },
+    "ndef_spec.test_mixed_short_normal_message": {
+      "source": "tests/ndef/src/test_spec_ndef.c",
+      "line": 57,
+      "executions": [
+        {
+          "scenario": "libraries.zndef",
+          "platform": "qemu_cortex_m3/ti_lm3s6965",
+          "status": "passed"
+        },
+        {
+          "scenario": "libraries.zndef",
+          "platform": "qemu_x86/atom",
+          "status": "passed"
+        }
+      ]
+    },
+    "ndef_spec.test_all_header_flag_combinations": {
+      "source": "tests/ndef/src/test_spec_ndef.c",
+      "line": 79,
+      "executions": [
+        {
+          "scenario": "libraries.zndef",
+          "platform": "qemu_cortex_m3/ti_lm3s6965",
+          "status": "passed"
+        },
+        {
+          "scenario": "libraries.zndef",
+          "platform": "qemu_x86/atom",
+          "status": "passed"
+        }
+      ]
+    },
+    "ndef_spec.test_tnf_wire_matrix": {
+      "source": "tests/ndef/src/test_spec_ndef.c",
+      "line": 109,
+      "executions": [
+        {
+          "scenario": "libraries.zndef",
+          "platform": "qemu_cortex_m3/ti_lm3s6965",
+          "status": "passed"
+        },
+        {
+          "scenario": "libraries.zndef",
+          "platform": "qemu_x86/atom",
+          "status": "passed"
+        }
+      ]
+    },
+    "ndef_spec.test_tnf_forbidden_fields": {
+      "source": "tests/ndef/src/test_spec_ndef.c",
+      "line": 138,
+      "executions": [
+        {
+          "scenario": "libraries.zndef",
+          "platform": "qemu_cortex_m3/ti_lm3s6965",
+          "status": "passed"
+        },
+        {
+          "scenario": "libraries.zndef",
+          "platform": "qemu_x86/atom",
+          "status": "passed"
+        }
+      ]
+    },
+    "ndef_spec.test_writer_payload_size_boundaries": {
+      "source": "tests/ndef/src/test_spec_ndef.c",
+      "line": 169,
+      "executions": [
+        {
+          "scenario": "libraries.zndef",
+          "platform": "qemu_cortex_m3/ti_lm3s6965",
+          "status": "passed"
+        },
+        {
+          "scenario": "libraries.zndef",
+          "platform": "qemu_x86/atom",
+          "status": "passed"
+        }
+      ]
+    },
+    "ndef_spec.test_max_type_and_id_lengths": {
+      "source": "tests/ndef/src/test_spec_ndef.c",
+      "line": 221,
+      "executions": [
+        {
+          "scenario": "libraries.zndef",
+          "platform": "qemu_cortex_m3/ti_lm3s6965",
+          "status": "passed"
+        },
+        {
+          "scenario": "libraries.zndef",
+          "platform": "qemu_x86/atom",
+          "status": "passed"
+        }
+      ]
+    },
+    "ndef_spec.test_extreme_declared_lengths_are_bounded": {
+      "source": "tests/ndef/src/test_spec_ndef.c",
+      "line": 258,
+      "executions": [
+        {
+          "scenario": "libraries.zndef",
+          "platform": "qemu_cortex_m3/ti_lm3s6965",
+          "status": "passed"
+        },
+        {
+          "scenario": "libraries.zndef",
+          "platform": "qemu_x86/atom",
+          "status": "passed"
+        }
+      ]
+    },
+    "ndef_spec.test_chunk_writer_wire_and_logical_view": {
+      "source": "tests/ndef/src/test_spec_ndef.c",
+      "line": 272,
+      "executions": [
+        {
+          "scenario": "libraries.zndef",
+          "platform": "qemu_cortex_m3/ti_lm3s6965",
+          "status": "passed"
+        },
+        {
+          "scenario": "libraries.zndef",
+          "platform": "qemu_x86/atom",
+          "status": "passed"
+        }
+      ]
+    },
+    "ndef_spec.test_chunk_forbidden_message_flags": {
+      "source": "tests/ndef/src/test_spec_ndef.c",
+      "line": 323,
+      "executions": [
+        {
+          "scenario": "libraries.zndef",
+          "platform": "qemu_cortex_m3/ti_lm3s6965",
+          "status": "passed"
+        },
+        {
+          "scenario": "libraries.zndef",
+          "platform": "qemu_x86/atom",
+          "status": "passed"
+        }
+      ]
+    },
+    "ndef_spec.test_zero_length_chunks_and_il_restriction": {
+      "source": "tests/ndef/src/test_spec_ndef.c",
+      "line": 352,
+      "executions": [
+        {
+          "scenario": "libraries.zndef",
+          "platform": "qemu_cortex_m3/ti_lm3s6965",
+          "status": "passed"
+        },
+        {
+          "scenario": "libraries.zndef",
+          "platform": "qemu_x86/atom",
+          "status": "passed"
+        }
+      ]
+    },
+    "ndef_spec.test_nested_message_wire_and_opaque_payload": {
+      "source": "tests/ndef/src/test_spec_ndef.c",
+      "line": 378,
+      "executions": [
+        {
+          "scenario": "libraries.zndef",
+          "platform": "qemu_cortex_m3/ti_lm3s6965",
+          "status": "passed"
+        },
+        {
+          "scenario": "libraries.zndef",
+          "platform": "qemu_x86/atom",
+          "status": "passed"
+        }
+      ]
+    },
+    "rtd_spec.test_well_known_ascii_alphabet_exhaustive": {
+      "source": "tests/ndef/src/test_spec_rtd.c",
+      "line": 27,
+      "executions": [
+        {
+          "scenario": "libraries.zndef",
+          "platform": "qemu_cortex_m3/ti_lm3s6965",
+          "status": "passed"
+        },
+        {
+          "scenario": "libraries.zndef",
+          "platform": "qemu_x86/atom",
+          "status": "passed"
+        }
+      ]
+    },
+    "rtd_spec.test_external_ascii_alphabet_exhaustive": {
+      "source": "tests/ndef/src/test_spec_rtd.c",
+      "line": 43,
+      "executions": [
+        {
+          "scenario": "libraries.zndef",
+          "platform": "qemu_cortex_m3/ti_lm3s6965",
+          "status": "passed"
+        },
+        {
+          "scenario": "libraries.zndef",
+          "platform": "qemu_x86/atom",
+          "status": "passed"
+        }
+      ]
+    },
+    "rtd_spec.test_external_required_parts": {
+      "source": "tests/ndef/src/test_spec_rtd.c",
+      "line": 62,
+      "executions": [
+        {
+          "scenario": "libraries.zndef",
+          "platform": "qemu_cortex_m3/ti_lm3s6965",
+          "status": "passed"
+        },
+        {
+          "scenario": "libraries.zndef",
+          "platform": "qemu_x86/atom",
+          "status": "passed"
+        }
+      ]
+    },
+    "rtd_spec.test_well_known_percent_encoding_forbidden": {
+      "source": "tests/ndef/src/test_spec_rtd.c",
+      "line": 81,
+      "executions": [
+        {
+          "scenario": "libraries.zndef",
+          "platform": "qemu_cortex_m3/ti_lm3s6965",
+          "status": "passed"
+        },
+        {
+          "scenario": "libraries.zndef",
+          "platform": "qemu_x86/atom",
+          "status": "passed"
+        }
+      ]
+    },
+    "rtd_spec.test_external_percent_encoding_utf8": {
+      "source": "tests/ndef/src/test_spec_rtd.c",
+      "line": 93,
+      "executions": [
+        {
+          "scenario": "libraries.zndef",
+          "platform": "qemu_cortex_m3/ti_lm3s6965",
+          "status": "passed"
+        },
+        {
+          "scenario": "libraries.zndef",
+          "platform": "qemu_x86/atom",
+          "status": "passed"
+        }
+      ]
+    },
+    "rtd_spec.test_global_local_classification": {
+      "source": "tests/ndef/src/test_spec_rtd.c",
+      "line": 139,
+      "executions": [
+        {
+          "scenario": "libraries.zndef",
+          "platform": "qemu_cortex_m3/ti_lm3s6965",
+          "status": "passed"
+        },
+        {
+          "scenario": "libraries.zndef",
+          "platform": "qemu_x86/atom",
+          "status": "passed"
+        }
+      ]
+    },
+    "rtd_spec.test_binary_encoding_examples": {
+      "source": "tests/ndef/src/test_spec_rtd.c",
+      "line": 157,
+      "executions": [
+        {
+          "scenario": "libraries.zndef",
+          "platform": "qemu_cortex_m3/ti_lm3s6965",
+          "status": "passed"
+        },
+        {
+          "scenario": "libraries.zndef",
+          "platform": "qemu_x86/atom",
+          "status": "passed"
+        }
+      ]
+    },
+    "rtd_spec.test_well_known_equivalence": {
+      "source": "tests/ndef/src/test_spec_rtd.c",
+      "line": 190,
+      "executions": [
+        {
+          "scenario": "libraries.zndef",
+          "platform": "qemu_cortex_m3/ti_lm3s6965",
+          "status": "passed"
+        },
+        {
+          "scenario": "libraries.zndef",
+          "platform": "qemu_x86/atom",
+          "status": "passed"
+        }
+      ]
+    },
+    "rtd_spec.test_external_equivalence": {
+      "source": "tests/ndef/src/test_spec_rtd.c",
+      "line": 216,
+      "executions": [
+        {
+          "scenario": "libraries.zndef",
+          "platform": "qemu_cortex_m3/ti_lm3s6965",
+          "status": "passed"
+        },
+        {
+          "scenario": "libraries.zndef",
+          "platform": "qemu_x86/atom",
+          "status": "passed"
+        }
+      ]
+    },
+    "rtd_spec.test_unknown_types_do_not_block_known_record_lookup": {
+      "source": "tests/ndef/src/test_spec_rtd.c",
+      "line": 243,
+      "executions": [
+        {
+          "scenario": "libraries.zndef",
+          "platform": "qemu_cortex_m3/ti_lm3s6965",
+          "status": "passed"
+        },
+        {
+          "scenario": "libraries.zndef",
+          "platform": "qemu_x86/atom",
+          "status": "passed"
+        }
+      ]
+    },
+    "rtd_spec.test_illegal_type_diagnostic_and_application_filter": {
+      "source": "tests/ndef/src/test_spec_rtd.c",
+      "line": 258,
+      "executions": [
+        {
+          "scenario": "libraries.zndef",
+          "platform": "qemu_cortex_m3/ti_lm3s6965",
+          "status": "passed"
+        },
+        {
+          "scenario": "libraries.zndef",
+          "platform": "qemu_x86/atom",
+          "status": "passed"
+        }
+      ]
+    },
+    "ndef_spec_sp.test_appendix_a1_exact_octets": {
+      "source": "tests/ndef/src/test_spec_sp.c",
+      "line": 41,
+      "executions": [
+        {
+          "scenario": "libraries.zndef",
+          "platform": "qemu_cortex_m3/ti_lm3s6965",
+          "status": "passed"
+        },
+        {
+          "scenario": "libraries.zndef",
+          "platform": "qemu_x86/atom",
+          "status": "passed"
+        }
+      ]
+    },
+    "ndef_spec_sp.test_appendix_a2_long_and_short_records": {
+      "source": "tests/ndef/src/test_spec_sp.c",
+      "line": 65,
+      "executions": [
+        {
+          "scenario": "libraries.zndef",
+          "platform": "qemu_cortex_m3/ti_lm3s6965",
+          "status": "passed"
+        },
+        {
+          "scenario": "libraries.zndef",
+          "platform": "qemu_x86/atom",
+          "status": "passed"
+        }
+      ]
+    },
+    "ndef_spec_sp.test_outer_type_name": {
+      "source": "tests/ndef/src/test_spec_sp.c",
+      "line": 95,
+      "executions": [
+        {
+          "scenario": "libraries.zndef",
+          "platform": "qemu_cortex_m3/ti_lm3s6965",
+          "status": "passed"
+        },
+        {
+          "scenario": "libraries.zndef",
+          "platform": "qemu_x86/atom",
+          "status": "passed"
+        }
+      ]
+    },
+    "ndef_spec_sp.test_uri_cardinality": {
+      "source": "tests/ndef/src/test_spec_sp.c",
+      "line": 112,
+      "executions": [
+        {
+          "scenario": "libraries.zndef",
+          "platform": "qemu_cortex_m3/ti_lm3s6965",
+          "status": "passed"
+        },
+        {
+          "scenario": "libraries.zndef",
+          "platform": "qemu_x86/atom",
+          "status": "passed"
+        }
+      ]
+    },
+    "ndef_spec_sp.test_metadata_before_uri": {
+      "source": "tests/ndef/src/test_spec_sp.c",
+      "line": 130,
+      "executions": [
+        {
+          "scenario": "libraries.zndef",
+          "platform": "qemu_cortex_m3/ti_lm3s6965",
+          "status": "passed"
+        },
+        {
+          "scenario": "libraries.zndef",
+          "platform": "qemu_x86/atom",
+          "status": "passed"
+        }
+      ]
+    },
+    "ndef_spec_sp.test_duplicate_title_language_case_insensitive": {
+      "source": "tests/ndef/src/test_spec_sp.c",
+      "line": 153,
+      "executions": [
+        {
+          "scenario": "libraries.zndef",
+          "platform": "qemu_cortex_m3/ti_lm3s6965",
+          "status": "passed"
+        },
+        {
+          "scenario": "libraries.zndef",
+          "platform": "qemu_x86/atom",
+          "status": "passed"
+        }
+      ]
+    },
+    "ndef_spec_sp.test_distinct_languages_and_exact_lookup": {
+      "source": "tests/ndef/src/test_spec_sp.c",
+      "line": 168,
+      "executions": [
+        {
+          "scenario": "libraries.zndef",
+          "platform": "qemu_cortex_m3/ti_lm3s6965",
+          "status": "passed"
+        },
+        {
+          "scenario": "libraries.zndef",
+          "platform": "qemu_x86/atom",
+          "status": "passed"
+        }
+      ]
+    },
+    "ndef_spec_sp.test_malformed_title_payload": {
+      "source": "tests/ndef/src/test_spec_sp.c",
+      "line": 188,
+      "executions": [
+        {
+          "scenario": "libraries.zndef",
+          "platform": "qemu_cortex_m3/ti_lm3s6965",
+          "status": "passed"
+        },
+        {
+          "scenario": "libraries.zndef",
+          "platform": "qemu_x86/atom",
+          "status": "passed"
+        }
+      ]
+    },
+    "ndef_spec_sp.test_action_values_and_reserved_values": {
+      "source": "tests/ndef/src/test_spec_sp.c",
+      "line": 204,
+      "executions": [
+        {
+          "scenario": "libraries.zndef",
+          "platform": "qemu_cortex_m3/ti_lm3s6965",
+          "status": "passed"
+        },
+        {
+          "scenario": "libraries.zndef",
+          "platform": "qemu_x86/atom",
+          "status": "passed"
+        }
+      ]
+    },
+    "ndef_spec_sp.test_action_payload_length": {
+      "source": "tests/ndef/src/test_spec_sp.c",
+      "line": 221,
+      "executions": [
+        {
+          "scenario": "libraries.zndef",
+          "platform": "qemu_cortex_m3/ti_lm3s6965",
+          "status": "passed"
+        },
+        {
+          "scenario": "libraries.zndef",
+          "platform": "qemu_x86/atom",
+          "status": "passed"
+        }
+      ]
+    },
+    "ndef_spec_sp.test_size_network_order_and_boundaries": {
+      "source": "tests/ndef/src/test_spec_sp.c",
+      "line": 236,
+      "executions": [
+        {
+          "scenario": "libraries.zndef",
+          "platform": "qemu_cortex_m3/ti_lm3s6965",
+          "status": "passed"
+        },
+        {
+          "scenario": "libraries.zndef",
+          "platform": "qemu_x86/atom",
+          "status": "passed"
+        }
+      ]
+    },
+    "ndef_spec_sp.test_size_requires_four_octets": {
+      "source": "tests/ndef/src/test_spec_sp.c",
+      "line": 254,
+      "executions": [
+        {
+          "scenario": "libraries.zndef",
+          "platform": "qemu_cortex_m3/ti_lm3s6965",
+          "status": "passed"
+        },
+        {
+          "scenario": "libraries.zndef",
+          "platform": "qemu_x86/atom",
+          "status": "passed"
+        }
+      ]
+    },
+    "ndef_spec_sp.test_type_length_and_mime_parameters": {
+      "source": "tests/ndef/src/test_spec_sp.c",
+      "line": 269,
+      "executions": [
+        {
+          "scenario": "libraries.zndef",
+          "platform": "qemu_cortex_m3/ti_lm3s6965",
+          "status": "passed"
+        },
+        {
+          "scenario": "libraries.zndef",
+          "platform": "qemu_x86/atom",
+          "status": "passed"
+        }
+      ]
+    },
+    "ndef_spec_sp.test_malformed_type_payload": {
+      "source": "tests/ndef/src/test_spec_sp.c",
+      "line": 283,
+      "executions": [
+        {
+          "scenario": "libraries.zndef",
+          "platform": "qemu_cortex_m3/ti_lm3s6965",
+          "status": "passed"
+        },
+        {
+          "scenario": "libraries.zndef",
+          "platform": "qemu_x86/atom",
+          "status": "passed"
+        }
+      ]
+    },
+    "ndef_spec_sp.test_multiple_image_and_video_icons": {
+      "source": "tests/ndef/src/test_spec_sp.c",
+      "line": 306,
+      "executions": [
+        {
+          "scenario": "libraries.zndef",
+          "platform": "qemu_cortex_m3/ti_lm3s6965",
+          "status": "passed"
+        },
+        {
+          "scenario": "libraries.zndef",
+          "platform": "qemu_x86/atom",
+          "status": "passed"
+        }
+      ]
+    },
+    "ndef_spec_sp.test_invalid_mime_prefix_is_not_an_icon": {
+      "source": "tests/ndef/src/test_spec_sp.c",
+      "line": 327,
+      "executions": [
+        {
+          "scenario": "libraries.zndef",
+          "platform": "qemu_cortex_m3/ti_lm3s6965",
+          "status": "passed"
+        },
+        {
+          "scenario": "libraries.zndef",
+          "platform": "qemu_x86/atom",
+          "status": "passed"
+        }
+      ]
+    },
+    "ndef_spec_sp.test_unknown_and_nested_extra_records": {
+      "source": "tests/ndef/src/test_spec_sp.c",
+      "line": 342,
+      "executions": [
+        {
+          "scenario": "libraries.zndef",
+          "platform": "qemu_cortex_m3/ti_lm3s6965",
+          "status": "passed"
+        },
+        {
+          "scenario": "libraries.zndef",
+          "platform": "qemu_x86/atom",
+          "status": "passed"
+        }
+      ]
+    },
+    "ndef_spec_sp.test_reserved_tnf_extra_is_opaque_to_reader": {
+      "source": "tests/ndef/src/test_spec_sp.c",
+      "line": 357,
+      "executions": [
+        {
+          "scenario": "libraries.zndef",
+          "platform": "qemu_cortex_m3/ti_lm3s6965",
+          "status": "passed"
+        },
+        {
+          "scenario": "libraries.zndef",
+          "platform": "qemu_x86/atom",
+          "status": "passed"
+        }
+      ]
+    },
+    "ndef_spec_sp.test_nested_message_must_consume_payload": {
+      "source": "tests/ndef/src/test_spec_sp.c",
+      "line": 368,
+      "executions": [
+        {
+          "scenario": "libraries.zndef",
+          "platform": "qemu_cortex_m3/ti_lm3s6965",
+          "status": "passed"
+        },
+        {
+          "scenario": "libraries.zndef",
+          "platform": "qemu_x86/atom",
+          "status": "passed"
+        }
+      ]
+    },
+    "ndef_spec_sp.test_nested_message_flags_and_truncations": {
+      "source": "tests/ndef/src/test_spec_sp.c",
+      "line": 381,
+      "executions": [
+        {
+          "scenario": "libraries.zndef",
+          "platform": "qemu_cortex_m3/ti_lm3s6965",
+          "status": "passed"
+        },
+        {
+          "scenario": "libraries.zndef",
+          "platform": "qemu_x86/atom",
+          "status": "passed"
+        }
+      ]
+    },
+    "ndef_spec_sp.test_duplicate_optional_metadata_policy": {
+      "source": "tests/ndef/src/test_spec_sp.c",
+      "line": 405,
+      "executions": [
+        {
+          "scenario": "libraries.zndef",
+          "platform": "qemu_cortex_m3/ti_lm3s6965",
+          "status": "passed"
+        },
+        {
+          "scenario": "libraries.zndef",
+          "platform": "qemu_x86/atom",
+          "status": "passed"
+        }
+      ]
+    },
+    "ndef_spec_sp.test_chunked_icon_payload_access": {
+      "source": "tests/ndef/src/test_spec_sp.c",
+      "line": 430,
+      "executions": [
+        {
+          "scenario": "libraries.zndef",
+          "platform": "qemu_cortex_m3/ti_lm3s6965",
+          "status": "passed"
+        },
+        {
+          "scenario": "libraries.zndef",
+          "platform": "qemu_x86/atom",
+          "status": "passed"
+        }
+      ]
+    },
+    "ndef_spec_sp.test_chunked_uri_reports_implementation_limit": {
+      "source": "tests/ndef/src/test_spec_sp.c",
+      "line": 451,
+      "executions": [
+        {
+          "scenario": "libraries.zndef",
+          "platform": "qemu_cortex_m3/ti_lm3s6965",
+          "status": "passed"
+        },
+        {
+          "scenario": "libraries.zndef",
+          "platform": "qemu_x86/atom",
+          "status": "passed"
+        }
+      ]
+    },
+    "ndef_spec_sp.test_unknown_chunked_extra_is_ignored": {
+      "source": "tests/ndef/src/test_spec_sp.c",
+      "line": 462,
+      "executions": [
+        {
+          "scenario": "libraries.zndef",
+          "platform": "qemu_cortex_m3/ti_lm3s6965",
+          "status": "passed"
+        },
+        {
+          "scenario": "libraries.zndef",
+          "platform": "qemu_x86/atom",
+          "status": "passed"
+        }
+      ]
+    },
+    "ndef_spec_sp.test_writer_matches_appendix_a1": {
+      "source": "tests/ndef/src/test_spec_sp.c",
+      "line": 476,
+      "executions": [
+        {
+          "scenario": "libraries.zndef",
+          "platform": "qemu_cortex_m3/ti_lm3s6965",
+          "status": "passed"
+        },
+        {
+          "scenario": "libraries.zndef",
+          "platform": "qemu_x86/atom",
+          "status": "passed"
+        }
+      ]
+    },
+    "ndef_spec_sp.test_writer_metadata_matches_independent_octets": {
+      "source": "tests/ndef/src/test_spec_sp.c",
+      "line": 494,
+      "executions": [
+        {
+          "scenario": "libraries.zndef",
+          "platform": "qemu_cortex_m3/ti_lm3s6965",
+          "status": "passed"
+        },
+        {
+          "scenario": "libraries.zndef",
+          "platform": "qemu_x86/atom",
+          "status": "passed"
+        }
+      ]
+    },
+    "ndef_spec_text.test_appendix_a_canonical_octets": {
+      "source": "tests/ndef/src/test_spec_text.c",
+      "line": 22,
+      "executions": [
+        {
+          "scenario": "libraries.zndef",
+          "platform": "qemu_cortex_m3/ti_lm3s6965",
+          "status": "passed"
+        },
+        {
+          "scenario": "libraries.zndef",
+          "platform": "qemu_x86/atom",
+          "status": "passed"
+        }
+      ]
+    },
+    "ndef_spec_text.test_status_rfu_is_ignored_and_never_written": {
+      "source": "tests/ndef/src/test_spec_text.c",
+      "line": 56,
+      "executions": [
+        {
+          "scenario": "libraries.zndef",
+          "platform": "qemu_cortex_m3/ti_lm3s6965",
+          "status": "passed"
+        },
+        {
+          "scenario": "libraries.zndef",
+          "platform": "qemu_x86/atom",
+          "status": "passed"
+        }
+      ]
+    },
+    "ndef_spec_text.test_language_syntax_in_both_directions": {
+      "source": "tests/ndef/src/test_spec_text.c",
+      "line": 82,
+      "executions": [
+        {
+          "scenario": "libraries.zndef",
+          "platform": "qemu_cortex_m3/ti_lm3s6965",
+          "status": "passed"
+        },
+        {
+          "scenario": "libraries.zndef",
+          "platform": "qemu_x86/atom",
+          "status": "passed"
+        }
+      ]
+    },
+    "ndef_spec_text.test_language_length_and_payload_bounds": {
+      "source": "tests/ndef/src/test_spec_text.c",
+      "line": 127,
+      "executions": [
+        {
+          "scenario": "libraries.zndef",
+          "platform": "qemu_cortex_m3/ti_lm3s6965",
+          "status": "passed"
+        },
+        {
+          "scenario": "libraries.zndef",
+          "platform": "qemu_x86/atom",
+          "status": "passed"
+        }
+      ]
+    },
+    "ndef_spec_text.test_utf8_scalar_boundaries_and_octet_length": {
+      "source": "tests/ndef/src/test_spec_text.c",
+      "line": 163,
+      "executions": [
+        {
+          "scenario": "libraries.zndef",
+          "platform": "qemu_cortex_m3/ti_lm3s6965",
+          "status": "passed"
+        },
+        {
+          "scenario": "libraries.zndef",
+          "platform": "qemu_x86/atom",
+          "status": "passed"
+        }
+      ]
+    },
+    "ndef_spec_text.test_invalid_utf8_is_rejected": {
+      "source": "tests/ndef/src/test_spec_text.c",
+      "line": 190,
+      "executions": [
+        {
+          "scenario": "libraries.zndef",
+          "platform": "qemu_cortex_m3/ti_lm3s6965",
+          "status": "passed"
+        },
+        {
+          "scenario": "libraries.zndef",
+          "platform": "qemu_x86/atom",
+          "status": "passed"
+        }
+      ]
+    },
+    "ndef_spec_text.test_utf16_bom_endianness_and_surrogate_boundaries": {
+      "source": "tests/ndef/src/test_spec_text.c",
+      "line": 234,
+      "executions": [
+        {
+          "scenario": "libraries.zndef",
+          "platform": "qemu_cortex_m3/ti_lm3s6965",
+          "status": "passed"
+        },
+        {
+          "scenario": "libraries.zndef",
+          "platform": "qemu_x86/atom",
+          "status": "passed"
+        }
+      ]
+    },
+    "ndef_spec_text.test_invalid_utf16_is_rejected_before_conversion": {
+      "source": "tests/ndef/src/test_spec_text.c",
+      "line": 272,
+      "executions": [
+        {
+          "scenario": "libraries.zndef",
+          "platform": "qemu_cortex_m3/ti_lm3s6965",
+          "status": "passed"
+        },
+        {
+          "scenario": "libraries.zndef",
+          "platform": "qemu_x86/atom",
+          "status": "passed"
+        }
+      ]
+    },
+    "ndef_spec_text.test_line_breaks_require_crlf": {
+      "source": "tests/ndef/src/test_spec_text.c",
+      "line": 311,
+      "executions": [
+        {
+          "scenario": "libraries.zndef",
+          "platform": "qemu_cortex_m3/ti_lm3s6965",
+          "status": "passed"
+        },
+        {
+          "scenario": "libraries.zndef",
+          "platform": "qemu_x86/atom",
+          "status": "passed"
+        }
+      ]
+    },
+    "ndef_spec_text.test_display_policy_does_not_rewrite_payload": {
+      "source": "tests/ndef/src/test_spec_text.c",
+      "line": 357,
+      "executions": [
+        {
+          "scenario": "libraries.zndef",
+          "platform": "qemu_cortex_m3/ti_lm3s6965",
+          "status": "passed"
+        },
+        {
+          "scenario": "libraries.zndef",
+          "platform": "qemu_x86/atom",
+          "status": "passed"
+        }
+      ]
+    },
+    "ndef_spec_text.test_conversion_capacity_empty_bom_and_invalid_encoding": {
+      "source": "tests/ndef/src/test_spec_text.c",
+      "line": 371,
+      "executions": [
+        {
+          "scenario": "libraries.zndef",
+          "platform": "qemu_cortex_m3/ti_lm3s6965",
+          "status": "passed"
+        },
+        {
+          "scenario": "libraries.zndef",
+          "platform": "qemu_x86/atom",
+          "status": "passed"
+        }
+      ]
+    },
+    "ndef_spec_text.test_record_type_chunking_and_invalid_arguments": {
+      "source": "tests/ndef/src/test_spec_text.c",
+      "line": 393,
+      "executions": [
+        {
+          "scenario": "libraries.zndef",
+          "platform": "qemu_cortex_m3/ti_lm3s6965",
+          "status": "passed"
+        },
+        {
+          "scenario": "libraries.zndef",
+          "platform": "qemu_x86/atom",
+          "status": "passed"
+        }
+      ]
+    },
+    "ndef_spec_uri.test_appendix_a_canonical_octets": {
+      "source": "tests/ndef/src/test_spec_uri.c",
+      "line": 56,
+      "executions": [
+        {
+          "scenario": "libraries.zndef",
+          "platform": "qemu_cortex_m3/ti_lm3s6965",
+          "status": "passed"
+        },
+        {
+          "scenario": "libraries.zndef",
+          "platform": "qemu_x86/atom",
+          "status": "passed"
+        }
+      ]
+    },
+    "ndef_spec_uri.test_all_abbreviation_table_entries": {
+      "source": "tests/ndef/src/test_spec_uri.c",
+      "line": 108,
+      "executions": [
+        {
+          "scenario": "libraries.zndef",
+          "platform": "qemu_cortex_m3/ti_lm3s6965",
+          "status": "passed"
+        },
+        {
+          "scenario": "libraries.zndef",
+          "platform": "qemu_x86/atom",
+          "status": "passed"
+        }
+      ]
+    },
+    "ndef_spec_uri.test_all_rfu_codes_are_no_prefix": {
+      "source": "tests/ndef/src/test_spec_uri.c",
+      "line": 142,
+      "executions": [
+        {
+          "scenario": "libraries.zndef",
+          "platform": "qemu_cortex_m3/ti_lm3s6965",
+          "status": "passed"
+        },
+        {
+          "scenario": "libraries.zndef",
+          "platform": "qemu_x86/atom",
+          "status": "passed"
+        }
+      ]
+    },
+    "ndef_spec_uri.test_no_substitution_is_valid_with_known_scheme": {
+      "source": "tests/ndef/src/test_spec_uri.c",
+      "line": 166,
+      "executions": [
+        {
+          "scenario": "libraries.zndef",
+          "platform": "qemu_cortex_m3/ti_lm3s6965",
+          "status": "passed"
+        },
+        {
+          "scenario": "libraries.zndef",
+          "platform": "qemu_x86/atom",
+          "status": "passed"
+        }
+      ]
+    },
+    "ndef_spec_uri.test_unicode_iri_is_preserved_as_utf8": {
+      "source": "tests/ndef/src/test_spec_uri.c",
+      "line": 186,
+      "executions": [
+        {
+          "scenario": "libraries.zndef",
+          "platform": "qemu_cortex_m3/ti_lm3s6965",
+          "status": "passed"
+        },
+        {
+          "scenario": "libraries.zndef",
+          "platform": "qemu_x86/atom",
+          "status": "passed"
+        }
+      ]
+    },
+    "ndef_spec_uri.test_every_c0_control_discards_record": {
+      "source": "tests/ndef/src/test_spec_uri.c",
+      "line": 208,
+      "executions": [
+        {
+          "scenario": "libraries.zndef",
+          "platform": "qemu_cortex_m3/ti_lm3s6965",
+          "status": "passed"
+        },
+        {
+          "scenario": "libraries.zndef",
+          "platform": "qemu_x86/atom",
+          "status": "passed"
+        }
+      ]
+    },
+    "ndef_spec_uri.test_invalid_utf8_discards_record": {
+      "source": "tests/ndef/src/test_spec_uri.c",
+      "line": 226,
+      "executions": [
+        {
+          "scenario": "libraries.zndef",
+          "platform": "qemu_cortex_m3/ti_lm3s6965",
+          "status": "passed"
+        },
+        {
+          "scenario": "libraries.zndef",
+          "platform": "qemu_x86/atom",
+          "status": "passed"
+        }
+      ]
+    },
+    "ndef_spec_uri.test_longest_prefix_selection_and_case_preservation": {
+      "source": "tests/ndef/src/test_spec_uri.c",
+      "line": 264,
+      "executions": [
+        {
+          "scenario": "libraries.zndef",
+          "platform": "qemu_cortex_m3/ti_lm3s6965",
+          "status": "passed"
+        },
+        {
+          "scenario": "libraries.zndef",
+          "platform": "qemu_x86/atom",
+          "status": "passed"
+        }
+      ]
+    },
+    "ndef_spec_uri.test_framing_empty_fields_and_capacity": {
+      "source": "tests/ndef/src/test_spec_uri.c",
+      "line": 301,
+      "executions": [
+        {
+          "scenario": "libraries.zndef",
+          "platform": "qemu_cortex_m3/ti_lm3s6965",
+          "status": "passed"
+        },
+        {
+          "scenario": "libraries.zndef",
+          "platform": "qemu_x86/atom",
+          "status": "passed"
+        }
+      ]
+    },
+    "ndef_spec_uri.test_record_type_chunking_and_invalid_arguments": {
+      "source": "tests/ndef/src/test_spec_uri.c",
+      "line": 341,
+      "executions": [
+        {
+          "scenario": "libraries.zndef",
+          "platform": "qemu_cortex_m3/ti_lm3s6965",
+          "status": "passed"
+        },
+        {
+          "scenario": "libraries.zndef",
+          "platform": "qemu_x86/atom",
+          "status": "passed"
+        }
+      ]
+    },
+    "ndef_tlv.test_find_ndef": {
+      "source": "tests/ndef/src/test_tlv_fuzz.c",
+      "line": 23,
+      "executions": [
+        {
+          "scenario": "libraries.zndef",
+          "platform": "qemu_cortex_m3/ti_lm3s6965",
+          "status": "passed"
+        },
+        {
+          "scenario": "libraries.zndef",
+          "platform": "qemu_x86/atom",
+          "status": "passed"
+        }
+      ]
+    },
+    "ndef_tlv.test_wrap": {
+      "source": "tests/ndef/src/test_tlv_fuzz.c",
+      "line": 66,
+      "executions": [
+        {
+          "scenario": "libraries.zndef",
+          "platform": "qemu_cortex_m3/ti_lm3s6965",
+          "status": "passed"
+        },
+        {
+          "scenario": "libraries.zndef",
+          "platform": "qemu_x86/atom",
+          "status": "passed"
+        }
+      ]
+    },
+    "ndef_tlv.test_fuzz_mutations": {
+      "source": "tests/ndef/src/test_tlv_fuzz.c",
+      "line": 241,
+      "executions": [
+        {
+          "scenario": "libraries.zndef",
+          "platform": "qemu_cortex_m3/ti_lm3s6965",
+          "status": "passed"
+        },
+        {
+          "scenario": "libraries.zndef",
+          "platform": "qemu_x86/atom",
+          "status": "passed"
+        }
+      ]
+    },
+    "ndef_validate.test_scratch_arguments": {
+      "source": "tests/ndef/src/test_validate.c",
+      "line": 19,
+      "executions": [
+        {
+          "scenario": "libraries.zndef.features.validation_disabled",
+          "platform": "qemu_cortex_m3/ti_lm3s6965",
+          "status": "passed"
+        },
+        {
+          "scenario": "libraries.zndef.features.validation_disabled",
+          "platform": "qemu_x86/atom",
+          "status": "passed"
+        },
+        {
+          "scenario": "libraries.zndef.features.opaque_rtds",
+          "platform": "qemu_cortex_m3/ti_lm3s6965",
+          "status": "passed"
+        },
+        {
+          "scenario": "libraries.zndef.features.opaque_rtds",
+          "platform": "qemu_x86/atom",
+          "status": "passed"
+        },
+        {
+          "scenario": "libraries.zndef.features.core_only",
+          "platform": "qemu_cortex_m3/ti_lm3s6965",
+          "status": "passed"
+        },
+        {
+          "scenario": "libraries.zndef.features.core_only",
+          "platform": "qemu_x86/atom",
+          "status": "passed"
+        },
+        {
+          "scenario": "libraries.zndef",
+          "platform": "qemu_cortex_m3/ti_lm3s6965",
+          "status": "passed"
+        },
+        {
+          "scenario": "libraries.zndef",
+          "platform": "qemu_x86/atom",
+          "status": "passed"
+        }
+      ]
+    },
+    "ndef_validate.test_chunked_text_requires_scratch": {
+      "source": "tests/ndef/src/test_validate.c",
+      "line": 31,
+      "executions": [
+        {
+          "scenario": "libraries.zndef.features.validation_disabled",
+          "platform": "qemu_cortex_m3/ti_lm3s6965",
+          "status": "passed"
+        },
+        {
+          "scenario": "libraries.zndef.features.validation_disabled",
+          "platform": "qemu_x86/atom",
+          "status": "passed"
+        },
+        {
+          "scenario": "libraries.zndef.features.opaque_rtds",
+          "platform": "qemu_cortex_m3/ti_lm3s6965",
+          "status": "passed"
+        },
+        {
+          "scenario": "libraries.zndef.features.opaque_rtds",
+          "platform": "qemu_x86/atom",
+          "status": "passed"
+        },
+        {
+          "scenario": "libraries.zndef.features.core_only",
+          "platform": "qemu_cortex_m3/ti_lm3s6965",
+          "status": "passed"
+        },
+        {
+          "scenario": "libraries.zndef.features.core_only",
+          "platform": "qemu_x86/atom",
+          "status": "passed"
+        },
+        {
+          "scenario": "libraries.zndef",
+          "platform": "qemu_cortex_m3/ti_lm3s6965",
+          "status": "passed"
+        },
+        {
+          "scenario": "libraries.zndef",
+          "platform": "qemu_x86/atom",
+          "status": "passed"
+        }
+      ]
+    },
+    "ndef_validate.test_chunked_text_with_scratch": {
+      "source": "tests/ndef/src/test_validate.c",
+      "line": 55,
+      "executions": [
+        {
+          "scenario": "libraries.zndef.features.validation_disabled",
+          "platform": "qemu_cortex_m3/ti_lm3s6965",
+          "status": "passed"
+        },
+        {
+          "scenario": "libraries.zndef.features.validation_disabled",
+          "platform": "qemu_x86/atom",
+          "status": "passed"
+        },
+        {
+          "scenario": "libraries.zndef.features.opaque_rtds",
+          "platform": "qemu_cortex_m3/ti_lm3s6965",
+          "status": "passed"
+        },
+        {
+          "scenario": "libraries.zndef.features.opaque_rtds",
+          "platform": "qemu_x86/atom",
+          "status": "passed"
+        },
+        {
+          "scenario": "libraries.zndef.features.core_only",
+          "platform": "qemu_cortex_m3/ti_lm3s6965",
+          "status": "passed"
+        },
+        {
+          "scenario": "libraries.zndef.features.core_only",
+          "platform": "qemu_x86/atom",
+          "status": "passed"
+        },
+        {
+          "scenario": "libraries.zndef",
+          "platform": "qemu_cortex_m3/ti_lm3s6965",
+          "status": "passed"
+        },
+        {
+          "scenario": "libraries.zndef",
+          "platform": "qemu_x86/atom",
+          "status": "passed"
+        }
+      ]
+    },
+    "ndef_validate.test_chunked_text_small_scratch": {
+      "source": "tests/ndef/src/test_validate.c",
+      "line": 80,
+      "executions": [
+        {
+          "scenario": "libraries.zndef.features.validation_disabled",
+          "platform": "qemu_cortex_m3/ti_lm3s6965",
+          "status": "passed"
+        },
+        {
+          "scenario": "libraries.zndef.features.validation_disabled",
+          "platform": "qemu_x86/atom",
+          "status": "passed"
+        },
+        {
+          "scenario": "libraries.zndef.features.opaque_rtds",
+          "platform": "qemu_cortex_m3/ti_lm3s6965",
+          "status": "passed"
+        },
+        {
+          "scenario": "libraries.zndef.features.opaque_rtds",
+          "platform": "qemu_x86/atom",
+          "status": "passed"
+        },
+        {
+          "scenario": "libraries.zndef.features.core_only",
+          "platform": "qemu_cortex_m3/ti_lm3s6965",
+          "status": "passed"
+        },
+        {
+          "scenario": "libraries.zndef.features.core_only",
+          "platform": "qemu_x86/atom",
+          "status": "passed"
+        },
+        {
+          "scenario": "libraries.zndef",
+          "platform": "qemu_cortex_m3/ti_lm3s6965",
+          "status": "passed"
+        },
+        {
+          "scenario": "libraries.zndef",
+          "platform": "qemu_x86/atom",
+          "status": "passed"
+        }
+      ]
+    },
+    "ndef_validate.test_malformed_chunked_payload": {
+      "source": "tests/ndef/src/test_validate.c",
+      "line": 103,
+      "executions": [
+        {
+          "scenario": "libraries.zndef.features.validation_disabled",
+          "platform": "qemu_cortex_m3/ti_lm3s6965",
+          "status": "passed"
+        },
+        {
+          "scenario": "libraries.zndef.features.validation_disabled",
+          "platform": "qemu_x86/atom",
+          "status": "passed"
+        },
+        {
+          "scenario": "libraries.zndef.features.opaque_rtds",
+          "platform": "qemu_cortex_m3/ti_lm3s6965",
+          "status": "passed"
+        },
+        {
+          "scenario": "libraries.zndef.features.opaque_rtds",
+          "platform": "qemu_x86/atom",
+          "status": "passed"
+        },
+        {
+          "scenario": "libraries.zndef.features.core_only",
+          "platform": "qemu_cortex_m3/ti_lm3s6965",
+          "status": "passed"
+        },
+        {
+          "scenario": "libraries.zndef.features.core_only",
+          "platform": "qemu_x86/atom",
+          "status": "passed"
+        },
+        {
+          "scenario": "libraries.zndef",
+          "platform": "qemu_cortex_m3/ti_lm3s6965",
+          "status": "passed"
+        },
+        {
+          "scenario": "libraries.zndef",
+          "platform": "qemu_x86/atom",
+          "status": "passed"
+        }
+      ]
+    },
+    "ndef_validate.test_opaque_chunked_payloads_need_no_scratch": {
+      "source": "tests/ndef/src/test_validate.c",
+      "line": 137,
+      "executions": [
+        {
+          "scenario": "libraries.zndef.features.validation_disabled",
+          "platform": "qemu_cortex_m3/ti_lm3s6965",
+          "status": "passed"
+        },
+        {
+          "scenario": "libraries.zndef.features.validation_disabled",
+          "platform": "qemu_x86/atom",
+          "status": "passed"
+        },
+        {
+          "scenario": "libraries.zndef.features.opaque_rtds",
+          "platform": "qemu_cortex_m3/ti_lm3s6965",
+          "status": "passed"
+        },
+        {
+          "scenario": "libraries.zndef.features.opaque_rtds",
+          "platform": "qemu_x86/atom",
+          "status": "passed"
+        },
+        {
+          "scenario": "libraries.zndef.features.core_only",
+          "platform": "qemu_cortex_m3/ti_lm3s6965",
+          "status": "passed"
+        },
+        {
+          "scenario": "libraries.zndef.features.core_only",
+          "platform": "qemu_x86/atom",
+          "status": "passed"
+        },
+        {
+          "scenario": "libraries.zndef",
+          "platform": "qemu_cortex_m3/ti_lm3s6965",
+          "status": "passed"
+        },
+        {
+          "scenario": "libraries.zndef",
+          "platform": "qemu_x86/atom",
+          "status": "passed"
+        }
+      ]
+    },
+    "ndef_validate.test_scratch_reused_between_records": {
+      "source": "tests/ndef/src/test_validate.c",
+      "line": 162,
+      "executions": [
+        {
+          "scenario": "libraries.zndef.features.validation_disabled",
+          "platform": "qemu_cortex_m3/ti_lm3s6965",
+          "status": "passed"
+        },
+        {
+          "scenario": "libraries.zndef.features.validation_disabled",
+          "platform": "qemu_x86/atom",
+          "status": "passed"
+        },
+        {
+          "scenario": "libraries.zndef.features.opaque_rtds",
+          "platform": "qemu_cortex_m3/ti_lm3s6965",
+          "status": "passed"
+        },
+        {
+          "scenario": "libraries.zndef.features.opaque_rtds",
+          "platform": "qemu_x86/atom",
+          "status": "passed"
+        },
+        {
+          "scenario": "libraries.zndef.features.core_only",
+          "platform": "qemu_cortex_m3/ti_lm3s6965",
+          "status": "passed"
+        },
+        {
+          "scenario": "libraries.zndef.features.core_only",
+          "platform": "qemu_x86/atom",
+          "status": "passed"
+        },
+        {
+          "scenario": "libraries.zndef",
+          "platform": "qemu_cortex_m3/ti_lm3s6965",
+          "status": "passed"
+        },
+        {
+          "scenario": "libraries.zndef",
+          "platform": "qemu_x86/atom",
+          "status": "passed"
+        }
+      ]
+    },
+    "ndef_validate.test_unsupported_rtd_versions": {
+      "source": "tests/ndef/src/test_validate.c",
+      "line": 184,
+      "executions": [
+        {
+          "scenario": "libraries.zndef.features.validation_disabled",
+          "platform": "qemu_cortex_m3/ti_lm3s6965",
+          "status": "passed"
+        },
+        {
+          "scenario": "libraries.zndef.features.validation_disabled",
+          "platform": "qemu_x86/atom",
+          "status": "passed"
+        },
+        {
+          "scenario": "libraries.zndef.features.opaque_rtds",
+          "platform": "qemu_cortex_m3/ti_lm3s6965",
+          "status": "passed"
+        },
+        {
+          "scenario": "libraries.zndef.features.opaque_rtds",
+          "platform": "qemu_x86/atom",
+          "status": "passed"
+        },
+        {
+          "scenario": "libraries.zndef.features.core_only",
+          "platform": "qemu_cortex_m3/ti_lm3s6965",
+          "status": "passed"
+        },
+        {
+          "scenario": "libraries.zndef.features.core_only",
+          "platform": "qemu_x86/atom",
+          "status": "passed"
+        },
+        {
+          "scenario": "libraries.zndef",
+          "platform": "qemu_cortex_m3/ti_lm3s6965",
+          "status": "passed"
+        },
+        {
+          "scenario": "libraries.zndef",
+          "platform": "qemu_x86/atom",
+          "status": "passed"
+        }
+      ]
+    },
+    "ndef_writer.test_single_record": {
+      "source": "tests/ndef/src/test_writer.c",
+      "line": 34,
+      "executions": [
+        {
+          "scenario": "libraries.zndef",
+          "platform": "qemu_cortex_m3/ti_lm3s6965",
+          "status": "passed"
+        },
+        {
+          "scenario": "libraries.zndef",
+          "platform": "qemu_x86/atom",
+          "status": "passed"
+        }
+      ]
+    },
+    "ndef_writer.test_flags_follow_records": {
+      "source": "tests/ndef/src/test_writer.c",
+      "line": 48,
+      "executions": [
+        {
+          "scenario": "libraries.zndef",
+          "platform": "qemu_cortex_m3/ti_lm3s6965",
+          "status": "passed"
+        },
+        {
+          "scenario": "libraries.zndef",
+          "platform": "qemu_x86/atom",
+          "status": "passed"
+        }
+      ]
+    },
+    "ndef_writer.test_long_record_round_trip": {
+      "source": "tests/ndef/src/test_writer.c",
+      "line": 71,
+      "executions": [
+        {
+          "scenario": "libraries.zndef",
+          "platform": "qemu_cortex_m3/ti_lm3s6965",
+          "status": "passed"
+        },
+        {
+          "scenario": "libraries.zndef",
+          "platform": "qemu_x86/atom",
+          "status": "passed"
+        }
+      ]
+    },
+    "ndef_writer.test_no_space": {
+      "source": "tests/ndef/src/test_writer.c",
+      "line": 88,
+      "executions": [
+        {
+          "scenario": "libraries.zndef",
+          "platform": "qemu_cortex_m3/ti_lm3s6965",
+          "status": "passed"
+        },
+        {
+          "scenario": "libraries.zndef",
+          "platform": "qemu_x86/atom",
+          "status": "passed"
+        }
+      ]
+    },
+    "ndef_writer.test_invalid_desc": {
+      "source": "tests/ndef/src/test_writer.c",
+      "line": 102,
+      "executions": [
+        {
+          "scenario": "libraries.zndef",
+          "platform": "qemu_cortex_m3/ti_lm3s6965",
+          "status": "passed"
+        },
+        {
+          "scenario": "libraries.zndef",
+          "platform": "qemu_x86/atom",
+          "status": "passed"
+        }
+      ]
+    },
+    "ndef_writer.test_open_payload_short": {
+      "source": "tests/ndef/src/test_writer.c",
+      "line": 131,
+      "executions": [
+        {
+          "scenario": "libraries.zndef",
+          "platform": "qemu_cortex_m3/ti_lm3s6965",
+          "status": "passed"
+        },
+        {
+          "scenario": "libraries.zndef",
+          "platform": "qemu_x86/atom",
+          "status": "passed"
+        }
+      ]
+    },
+    "ndef_writer.test_open_payload_long": {
+      "source": "tests/ndef/src/test_writer.c",
+      "line": 162,
+      "executions": [
+        {
+          "scenario": "libraries.zndef",
+          "platform": "qemu_cortex_m3/ti_lm3s6965",
+          "status": "passed"
+        },
+        {
+          "scenario": "libraries.zndef",
+          "platform": "qemu_x86/atom",
+          "status": "passed"
+        }
+      ]
+    },
+    "ndef_writer.test_abort": {
+      "source": "tests/ndef/src/test_writer.c",
+      "line": 184,
+      "executions": [
+        {
+          "scenario": "libraries.zndef",
+          "platform": "qemu_cortex_m3/ti_lm3s6965",
+          "status": "passed"
+        },
+        {
+          "scenario": "libraries.zndef",
+          "platform": "qemu_x86/atom",
+          "status": "passed"
+        }
+      ]
+    },
+    "ndef_writer.test_chunks": {
+      "source": "tests/ndef/src/test_writer.c",
+      "line": 201,
+      "executions": [
+        {
+          "scenario": "libraries.zndef",
+          "platform": "qemu_cortex_m3/ti_lm3s6965",
+          "status": "passed"
+        },
+        {
+          "scenario": "libraries.zndef",
+          "platform": "qemu_x86/atom",
+          "status": "passed"
+        }
+      ]
+    },
+    "ndef_writer.test_chunk_after_record": {
+      "source": "tests/ndef/src/test_writer.c",
+      "line": 239,
+      "executions": [
+        {
+          "scenario": "libraries.zndef",
+          "platform": "qemu_cortex_m3/ti_lm3s6965",
+          "status": "passed"
+        },
+        {
+          "scenario": "libraries.zndef",
+          "platform": "qemu_x86/atom",
+          "status": "passed"
+        }
+      ]
+    },
+    "ndef_writer.test_nested": {
+      "source": "tests/ndef/src/test_writer.c",
+      "line": 253,
+      "executions": [
+        {
+          "scenario": "libraries.zndef",
+          "platform": "qemu_cortex_m3/ti_lm3s6965",
+          "status": "passed"
+        },
+        {
+          "scenario": "libraries.zndef",
+          "platform": "qemu_x86/atom",
+          "status": "passed"
+        }
+      ]
+    },
+    "ndef_writer.test_nested_no_space": {
+      "source": "tests/ndef/src/test_writer.c",
+      "line": 286,
+      "executions": [
+        {
+          "scenario": "libraries.zndef",
+          "platform": "qemu_cortex_m3/ti_lm3s6965",
+          "status": "passed"
+        },
+        {
+          "scenario": "libraries.zndef",
+          "platform": "qemu_x86/atom",
+          "status": "passed"
+        }
+      ]
+    }
+  },
+  "api_direct_test_calls": {
+    "ndef_di_elem_get": [
+      "ndef_rtd.test_di_round_trip"
+    ],
+    "ndef_di_parse": [
+      "ndef_rtd.test_di_round_trip"
+    ],
+    "ndef_di_payload_decode": [
+      "ndef_api.test_optional_decoders_reject_every_truncation",
+      "ndef_rtd.test_di_round_trip"
+    ],
+    "ndef_di_payload_encode": [
+      "ndef_rtd.test_di_round_trip"
+    ],
+    "ndef_di_write": [
+      "ndef_rtd.test_di_round_trip"
+    ],
+    "ndef_ho_ac_aux_get": [
+      "ndef_api.test_alternative_carrier_payload_encoding",
+      "ndef_rtd.test_handover_select"
+    ],
+    "ndef_ho_ac_get": [
+      "ndef_rtd.test_handover_select"
+    ],
+    "ndef_ho_ac_payload_decode": [
+      "ndef_api.test_alternative_carrier_payload_encoding",
+      "ndef_api.test_optional_decoders_reject_every_truncation",
+      "ndef_rtd.test_handover_records"
+    ],
+    "ndef_ho_ac_payload_encode": [
+      "ndef_api.test_alternative_carrier_payload_encoding"
+    ],
+    "ndef_ho_ac_write": [
+      "ndef_rtd.test_handover_request_rules",
+      "ndef_rtd.test_handover_select"
+    ],
+    "ndef_ho_begin": [
+      "ndef_rtd.test_handover_request_rules",
+      "ndef_rtd.test_handover_select",
+      "ndef_rtd.test_unknown_nested_chunks_remain_opaque",
+      "ndef_rtd.test_validate_nested_chunks_report_unsupported"
+    ],
+    "ndef_ho_carrier_payload_decode": [
+      "ndef_rtd.test_handover_records"
+    ],
+    "ndef_ho_carrier_write": [
+      "ndef_rtd.test_handover_records"
+    ],
+    "ndef_ho_cr_write": [
+      "ndef_rtd.test_handover_request_rules"
+    ],
+    "ndef_ho_end": [
+      "ndef_rtd.test_handover_request_rules",
+      "ndef_rtd.test_handover_select",
+      "ndef_rtd.test_unknown_nested_chunks_remain_opaque"
+    ],
+    "ndef_ho_err_write": [
+      "ndef_rtd.test_handover_request_rules",
+      "ndef_rtd.test_handover_select"
+    ],
+    "ndef_ho_parse": [
+      "ndef_rtd.test_handover_select"
+    ],
+    "ndef_ho_payload_decode": [
+      "ndef_rtd.test_handover_request_rules"
+    ],
+    "ndef_ho_type": [
+      "ndef_rtd.test_handover_records"
+    ],
+    "ndef_id_validate": [
+      "ndef_core.test_id_validate"
+    ],
+    "ndef_items_encode": [
+      "ndef_features.test_items_report_disabled_record_kinds",
+      "ndef_items.test_errors",
+      "ndef_items.test_same_octets_as_writer"
+    ],
+    "ndef_items_write": [
+      "ndef_api.test_items_keep_successful_prefix_on_error",
+      "ndef_items.test_mixed_with_writer"
+    ],
+    "ndef_msg_find_id": [
+      "ndef_core.test_find",
+      "ndef_rtd.test_handover_select"
+    ],
+    "ndef_msg_find_type": [
+      "ndef_core.test_find",
+      "ndef_writer.test_long_record_round_trip",
+      "rtd_spec.test_unknown_types_do_not_block_known_record_lookup"
+    ],
+    "ndef_msg_iter_index": [
+      "ndef_core.test_iterate_two_records"
+    ],
+    "ndef_msg_iter_init": [
+      "ndef_api.test_payload_ranges_cross_chunk_headers",
+      "ndef_core.test_chunk_rules",
+      "ndef_core.test_chunked_record",
+      "ndef_core.test_invalid_args",
+      "ndef_core.test_iterate_two_records",
+      "ndef_core.test_reserved_tnf_is_unknown",
+      "ndef_spec.test_chunk_writer_wire_and_logical_view",
+      "ndef_spec.test_zero_length_chunks_and_il_restriction",
+      "ndef_writer.test_chunks",
+      "rtd_spec.test_illegal_type_diagnostic_and_application_filter"
+    ],
+    "ndef_msg_iter_next": [
+      "ndef_api.test_payload_ranges_cross_chunk_headers",
+      "ndef_core.test_chunk_rules",
+      "ndef_core.test_chunked_record",
+      "ndef_core.test_iterate_two_records",
+      "ndef_core.test_reserved_tnf_is_unknown",
+      "ndef_spec.test_chunk_writer_wire_and_logical_view",
+      "ndef_spec.test_zero_length_chunks_and_il_restriction",
+      "ndef_writer.test_chunks",
+      "rtd_spec.test_illegal_type_diagnostic_and_application_filter"
+    ],
+    "ndef_msg_validate": [
+      "ndef_api.test_finish_is_observational_and_writer_recovers",
+      "ndef_api.test_items_keep_successful_prefix_on_error",
+      "ndef_core.test_decode_long_record",
+      "ndef_core.test_invalid_args",
+      "ndef_core.test_iterate_two_records",
+      "ndef_core.test_message_flags",
+      "ndef_core.test_reserved_tnf_is_unknown",
+      "ndef_core.test_trailing_octets",
+      "ndef_core.test_validate_id",
+      "ndef_features.test_core_remains_available",
+      "ndef_items.test_mixed_with_writer",
+      "ndef_items.test_same_octets_as_writer",
+      "ndef_rtd.test_di_round_trip",
+      "ndef_rtd.test_handover_records",
+      "ndef_rtd.test_handover_request_rules",
+      "ndef_rtd.test_handover_select",
+      "ndef_rtd.test_sig_covered_records",
+      "ndef_rtd.test_sp_round_trip",
+      "ndef_rtd.test_sp_rules",
+      "ndef_rtd.test_unknown_nested_chunks_remain_opaque",
+      "ndef_rtd.test_validate_nested_chunks_report_unsupported",
+      "ndef_rtd.test_validate_rtd",
+      "ndef_spec.test_all_header_flag_combinations",
+      "ndef_spec.test_chunk_forbidden_message_flags",
+      "ndef_spec.test_chunk_writer_wire_and_logical_view",
+      "ndef_spec.test_max_type_and_id_lengths",
+      "ndef_spec.test_mixed_short_normal_message",
+      "ndef_spec.test_nested_message_wire_and_opaque_payload",
+      "ndef_spec.test_normal_short_field_order",
+      "ndef_spec.test_tnf_forbidden_fields",
+      "ndef_spec.test_tnf_wire_matrix",
+      "ndef_spec.test_zero_length_chunks_and_il_restriction",
+      "ndef_tlv.test_find_ndef",
+      "ndef_tlv.test_fuzz_mutations",
+      "ndef_validate.test_chunked_text_requires_scratch",
+      "ndef_validate.test_malformed_chunked_payload",
+      "ndef_validate.test_opaque_chunked_payloads_need_no_scratch",
+      "ndef_validate.test_unsupported_rtd_versions",
+      "ndef_writer.test_abort",
+      "ndef_writer.test_chunk_after_record",
+      "ndef_writer.test_flags_follow_records",
+      "ndef_writer.test_no_space",
+      "rtd_spec.test_illegal_type_diagnostic_and_application_filter",
+      "rtd_spec.test_unknown_types_do_not_block_known_record_lookup"
+    ],
+    "ndef_msg_validate_buf": [
+      "ndef_rtd.test_validate_nested_chunks_report_unsupported",
+      "ndef_validate.test_chunked_text_small_scratch",
+      "ndef_validate.test_chunked_text_with_scratch",
+      "ndef_validate.test_malformed_chunked_payload",
+      "ndef_validate.test_opaque_chunked_payloads_need_no_scratch",
+      "ndef_validate.test_scratch_arguments",
+      "ndef_validate.test_scratch_reused_between_records",
+      "ndef_validate.test_unsupported_rtd_versions"
+    ],
+    "ndef_record_decode": [
+      "ndef_api.test_signature_data_propagates_callback_error",
+      "ndef_api.test_signature_parser_checks_type_and_chunk_state",
+      "ndef_core.test_decode_long_record",
+      "ndef_core.test_decode_short_record",
+      "ndef_core.test_invalid_args",
+      "ndef_core.test_type_eq",
+      "ndef_features.test_core_remains_available",
+      "ndef_spec.test_all_header_flag_combinations",
+      "ndef_spec.test_chunk_writer_wire_and_logical_view",
+      "ndef_spec.test_extreme_declared_lengths_are_bounded",
+      "ndef_spec.test_max_type_and_id_lengths",
+      "ndef_spec.test_nested_message_wire_and_opaque_payload",
+      "ndef_spec.test_normal_short_field_order",
+      "ndef_spec.test_tnf_forbidden_fields",
+      "ndef_spec.test_tnf_wire_matrix",
+      "ndef_spec.test_writer_payload_size_boundaries",
+      "ndef_spec_sp.test_appendix_a1_exact_octets",
+      "ndef_spec_sp.test_appendix_a2_long_and_short_records",
+      "ndef_spec_sp.test_outer_type_name",
+      "ndef_spec_text.test_appendix_a_canonical_octets",
+      "ndef_spec_text.test_record_type_chunking_and_invalid_arguments",
+      "ndef_spec_uri.test_appendix_a_canonical_octets",
+      "ndef_spec_uri.test_record_type_chunking_and_invalid_arguments",
+      "rtd_spec.test_well_known_equivalence"
+    ],
+    "ndef_record_is_wkt": [
+      "ndef_core.test_find",
+      "ndef_core.test_iterate_two_records",
+      "ndef_core.test_type_eq",
+      "ndef_rtd.test_handover_records",
+      "rtd_spec.test_illegal_type_diagnostic_and_application_filter"
+    ],
+    "ndef_record_payload_read": [
+      "ndef_api.test_payload_ranges_cross_chunk_headers",
+      "ndef_core.test_chunked_record",
+      "ndef_spec.test_chunk_writer_wire_and_logical_view",
+      "ndef_spec_sp.test_chunked_icon_payload_access",
+      "ndef_writer.test_chunks"
+    ],
+    "ndef_record_reassemble": [
+      "ndef_api.test_payload_ranges_cross_chunk_headers",
+      "ndef_core.test_chunked_record"
+    ],
+    "ndef_record_type_eq": [
+      "ndef_core.test_invalid_args",
+      "ndef_core.test_iterate_two_records",
+      "ndef_core.test_type_eq",
+      "ndef_rtd.test_handover_select",
+      "ndef_rtd.test_sp_round_trip",
+      "rtd_spec.test_external_equivalence",
+      "rtd_spec.test_well_known_equivalence"
+    ],
+    "ndef_sig_cert_get": [
+      "ndef_rtd.test_sig_round_trip"
+    ],
+    "ndef_sig_foreach_signed": [
+      "ndef_rtd.test_sig_covered_records"
+    ],
+    "ndef_sig_parse": [
+      "ndef_api.test_signature_parser_checks_type_and_chunk_state"
+    ],
+    "ndef_sig_payload_decode": [
+      "ndef_rtd.test_sig_round_trip",
+      "ndef_rtd.test_sig_v1_and_uri"
+    ],
+    "ndef_sig_payload_encode": [
+      "ndef_rtd.test_sig_round_trip",
+      "ndef_rtd.test_sig_v1_and_uri"
+    ],
+    "ndef_sig_record_data": [
+      "ndef_api.test_signature_data_propagates_callback_error"
+    ],
+    "ndef_sig_write": [
+      "ndef_rtd.test_sig_covered_records"
+    ],
+    "ndef_sp_action_write": [
+      "ndef_items.test_same_octets_as_writer",
+      "ndef_rtd.test_sp_rules",
+      "ndef_spec_sp.test_writer_metadata_matches_independent_octets"
+    ],
+    "ndef_sp_begin": [
+      "ndef_items.test_same_octets_as_writer",
+      "ndef_rtd.test_sp_rules",
+      "ndef_rtd.test_unknown_nested_chunks_remain_opaque",
+      "ndef_rtd.test_validate_nested_chunks_report_unsupported",
+      "ndef_spec_sp.test_writer_matches_appendix_a1",
+      "ndef_spec_sp.test_writer_metadata_matches_independent_octets"
+    ],
+    "ndef_sp_end": [
+      "ndef_items.test_same_octets_as_writer",
+      "ndef_rtd.test_sp_rules",
+      "ndef_rtd.test_unknown_nested_chunks_remain_opaque",
+      "ndef_spec_sp.test_writer_matches_appendix_a1",
+      "ndef_spec_sp.test_writer_metadata_matches_independent_octets"
+    ],
+    "ndef_sp_icon_get": [
+      "ndef_rtd.test_sp_round_trip",
+      "ndef_spec_sp.test_chunked_icon_payload_access",
+      "ndef_spec_sp.test_invalid_mime_prefix_is_not_an_icon",
+      "ndef_spec_sp.test_multiple_image_and_video_icons"
+    ],
+    "ndef_sp_icon_write": [
+      "ndef_items.test_same_octets_as_writer",
+      "ndef_rtd.test_sp_rules",
+      "ndef_spec_sp.test_writer_metadata_matches_independent_octets"
+    ],
+    "ndef_sp_parse": [
+      "ndef_rtd.test_sp_round_trip",
+      "ndef_spec_sp.test_appendix_a1_exact_octets",
+      "ndef_spec_sp.test_appendix_a2_long_and_short_records",
+      "ndef_spec_sp.test_outer_type_name"
+    ],
+    "ndef_sp_payload_decode": [
+      "ndef_rtd.test_sp_rules",
+      "ndef_spec_sp.test_action_payload_length",
+      "ndef_spec_sp.test_action_values_and_reserved_values",
+      "ndef_spec_sp.test_chunked_icon_payload_access",
+      "ndef_spec_sp.test_chunked_uri_reports_implementation_limit",
+      "ndef_spec_sp.test_distinct_languages_and_exact_lookup",
+      "ndef_spec_sp.test_duplicate_optional_metadata_policy",
+      "ndef_spec_sp.test_duplicate_title_language_case_insensitive",
+      "ndef_spec_sp.test_invalid_mime_prefix_is_not_an_icon",
+      "ndef_spec_sp.test_malformed_title_payload",
+      "ndef_spec_sp.test_malformed_type_payload",
+      "ndef_spec_sp.test_metadata_before_uri",
+      "ndef_spec_sp.test_multiple_image_and_video_icons",
+      "ndef_spec_sp.test_nested_message_flags_and_truncations",
+      "ndef_spec_sp.test_nested_message_must_consume_payload",
+      "ndef_spec_sp.test_reserved_tnf_extra_is_opaque_to_reader",
+      "ndef_spec_sp.test_size_network_order_and_boundaries",
+      "ndef_spec_sp.test_size_requires_four_octets",
+      "ndef_spec_sp.test_type_length_and_mime_parameters",
+      "ndef_spec_sp.test_unknown_and_nested_extra_records",
+      "ndef_spec_sp.test_unknown_chunked_extra_is_ignored",
+      "ndef_spec_sp.test_uri_cardinality"
+    ],
+    "ndef_sp_size_write": [
+      "ndef_spec_sp.test_writer_metadata_matches_independent_octets"
+    ],
+    "ndef_sp_title_find": [
+      "ndef_rtd.test_sp_round_trip",
+      "ndef_spec_sp.test_distinct_languages_and_exact_lookup"
+    ],
+    "ndef_sp_title_get": [
+      "ndef_rtd.test_sp_round_trip",
+      "ndef_spec_sp.test_appendix_a2_long_and_short_records",
+      "ndef_spec_sp.test_metadata_before_uri"
+    ],
+    "ndef_sp_type_write": [
+      "ndef_rtd.test_sp_rules",
+      "ndef_spec_sp.test_writer_metadata_matches_independent_octets"
+    ],
+    "ndef_text_parse": [
+      "ndef_rtd.test_text_utf8",
+      "ndef_rtd.test_text_wrong_record",
+      "ndef_spec_text.test_appendix_a_canonical_octets",
+      "ndef_spec_text.test_record_type_chunking_and_invalid_arguments"
+    ],
+    "ndef_text_payload_decode": [
+      "ndef_rtd.test_text_malformed",
+      "ndef_rtd.test_text_utf16",
+      "ndef_spec_text.test_conversion_capacity_empty_bom_and_invalid_encoding",
+      "ndef_spec_text.test_display_policy_does_not_rewrite_payload",
+      "ndef_spec_text.test_invalid_utf16_is_rejected_before_conversion",
+      "ndef_spec_text.test_invalid_utf8_is_rejected",
+      "ndef_spec_text.test_language_length_and_payload_bounds",
+      "ndef_spec_text.test_language_syntax_in_both_directions",
+      "ndef_spec_text.test_line_breaks_require_crlf",
+      "ndef_spec_text.test_record_type_chunking_and_invalid_arguments",
+      "ndef_spec_text.test_status_rfu_is_ignored_and_never_written",
+      "ndef_spec_text.test_utf16_bom_endianness_and_surrogate_boundaries",
+      "ndef_spec_text.test_utf8_scalar_boundaries_and_octet_length"
+    ],
+    "ndef_text_payload_encode": [
+      "ndef_rtd.test_text_encode",
+      "ndef_spec_text.test_appendix_a_canonical_octets",
+      "ndef_spec_text.test_invalid_utf16_is_rejected_before_conversion",
+      "ndef_spec_text.test_invalid_utf8_is_rejected",
+      "ndef_spec_text.test_language_length_and_payload_bounds",
+      "ndef_spec_text.test_language_syntax_in_both_directions",
+      "ndef_spec_text.test_line_breaks_require_crlf",
+      "ndef_spec_text.test_record_type_chunking_and_invalid_arguments",
+      "ndef_spec_text.test_status_rfu_is_ignored_and_never_written",
+      "ndef_spec_text.test_utf16_bom_endianness_and_surrogate_boundaries",
+      "ndef_spec_text.test_utf8_scalar_boundaries_and_octet_length"
+    ],
+    "ndef_text_to_utf8": [
+      "ndef_rtd.test_text_utf16",
+      "ndef_rtd.test_text_utf8",
+      "ndef_spec_text.test_appendix_a_canonical_octets",
+      "ndef_spec_text.test_conversion_capacity_empty_bom_and_invalid_encoding",
+      "ndef_spec_text.test_display_policy_does_not_rewrite_payload",
+      "ndef_spec_text.test_invalid_utf16_is_rejected_before_conversion",
+      "ndef_spec_text.test_invalid_utf8_is_rejected",
+      "ndef_spec_text.test_record_type_chunking_and_invalid_arguments",
+      "ndef_spec_text.test_status_rfu_is_ignored_and_never_written",
+      "ndef_spec_text.test_utf16_bom_endianness_and_surrogate_boundaries",
+      "ndef_spec_text.test_utf8_scalar_boundaries_and_octet_length"
+    ],
+    "ndef_text_write": [
+      "ndef_items.test_mixed_with_writer",
+      "ndef_items.test_same_octets_as_writer",
+      "ndef_rtd.test_sig_covered_records",
+      "ndef_rtd.test_sp_rules",
+      "ndef_rtd.test_text_utf8",
+      "ndef_spec_text.test_appendix_a_canonical_octets",
+      "ndef_spec_text.test_record_type_chunking_and_invalid_arguments"
+    ],
+    "ndef_tlv_find_ndef": [
+      "ndef_tlv.test_find_ndef",
+      "ndef_tlv.test_wrap"
+    ],
+    "ndef_tlv_header_encode": [
+      "ndef_api.test_tlv_length_boundaries_and_output_bounds",
+      "ndef_tlv.test_wrap"
+    ],
+    "ndef_tlv_iter_init": [
+      "ndef_tlv.test_find_ndef"
+    ],
+    "ndef_tlv_iter_next": [
+      "ndef_tlv.test_find_ndef"
+    ],
+    "ndef_tlv_wrap": [
+      "ndef_tlv.test_wrap"
+    ],
+    "ndef_type_validate": [
+      "ndef_core.test_type_validate",
+      "rtd_spec.test_external_ascii_alphabet_exhaustive",
+      "rtd_spec.test_external_percent_encoding_utf8",
+      "rtd_spec.test_external_required_parts",
+      "rtd_spec.test_global_local_classification",
+      "rtd_spec.test_illegal_type_diagnostic_and_application_filter",
+      "rtd_spec.test_well_known_ascii_alphabet_exhaustive",
+      "rtd_spec.test_well_known_percent_encoding_forbidden"
+    ],
+    "ndef_uri_parse": [
+      "ndef_rtd.test_uri_prefixes",
+      "ndef_spec_uri.test_appendix_a_canonical_octets",
+      "ndef_spec_uri.test_record_type_chunking_and_invalid_arguments"
+    ],
+    "ndef_uri_payload_decode": [
+      "ndef_rtd.test_uri_decode",
+      "ndef_spec_uri.test_all_abbreviation_table_entries",
+      "ndef_spec_uri.test_all_rfu_codes_are_no_prefix",
+      "ndef_spec_uri.test_every_c0_control_discards_record",
+      "ndef_spec_uri.test_framing_empty_fields_and_capacity",
+      "ndef_spec_uri.test_invalid_utf8_discards_record",
+      "ndef_spec_uri.test_no_substitution_is_valid_with_known_scheme",
+      "ndef_spec_uri.test_record_type_chunking_and_invalid_arguments",
+      "ndef_spec_uri.test_unicode_iri_is_preserved_as_utf8"
+    ],
+    "ndef_uri_payload_encode": [
+      "ndef_rtd.test_uri_decode",
+      "ndef_spec_uri.test_all_abbreviation_table_entries",
+      "ndef_spec_uri.test_all_rfu_codes_are_no_prefix",
+      "ndef_spec_uri.test_appendix_a_canonical_octets",
+      "ndef_spec_uri.test_every_c0_control_discards_record",
+      "ndef_spec_uri.test_framing_empty_fields_and_capacity",
+      "ndef_spec_uri.test_invalid_utf8_discards_record",
+      "ndef_spec_uri.test_longest_prefix_selection_and_case_preservation",
+      "ndef_spec_uri.test_record_type_chunking_and_invalid_arguments",
+      "ndef_spec_uri.test_unicode_iri_is_preserved_as_utf8"
+    ],
+    "ndef_uri_prefix": [
+      "ndef_rtd.test_uri_decode",
+      "ndef_spec_uri.test_all_abbreviation_table_entries",
+      "ndef_spec_uri.test_all_rfu_codes_are_no_prefix"
+    ],
+    "ndef_uri_to_string": [
+      "ndef_rtd.test_uri_decode",
+      "ndef_rtd.test_uri_prefixes",
+      "ndef_spec_sp.test_appendix_a1_exact_octets",
+      "ndef_spec_uri.test_all_abbreviation_table_entries",
+      "ndef_spec_uri.test_all_rfu_codes_are_no_prefix",
+      "ndef_spec_uri.test_appendix_a_canonical_octets",
+      "ndef_spec_uri.test_framing_empty_fields_and_capacity",
+      "ndef_spec_uri.test_no_substitution_is_valid_with_known_scheme",
+      "ndef_spec_uri.test_record_type_chunking_and_invalid_arguments",
+      "ndef_spec_uri.test_unicode_iri_is_preserved_as_utf8"
+    ],
+    "ndef_uri_write": [
+      "ndef_items.test_same_octets_as_writer",
+      "ndef_rtd.test_sig_covered_records",
+      "ndef_rtd.test_sp_rules",
+      "ndef_rtd.test_unknown_nested_chunks_remain_opaque",
+      "ndef_rtd.test_uri_prefixes",
+      "ndef_spec_sp.test_writer_matches_appendix_a1",
+      "ndef_spec_sp.test_writer_metadata_matches_independent_octets",
+      "ndef_spec_uri.test_appendix_a_canonical_octets",
+      "ndef_spec_uri.test_record_type_chunking_and_invalid_arguments"
+    ],
+    "ndef_utf8_valid": [
+      "ndef_core.test_utf8"
+    ],
+    "ndef_wkt_is_local": [
+      "ndef_core.test_wkt_local",
+      "rtd_spec.test_global_local_classification"
+    ],
+    "ndef_writer_chunk": [
+      "ndef_rtd.test_sig_covered_records",
+      "ndef_rtd.test_unknown_nested_chunks_remain_opaque",
+      "ndef_rtd.test_validate_nested_chunks_report_unsupported",
+      "ndef_spec.test_chunk_writer_wire_and_logical_view",
+      "ndef_writer.test_chunk_after_record",
+      "ndef_writer.test_chunks"
+    ],
+    "ndef_writer_chunk_begin": [
+      "ndef_rtd.test_sig_covered_records",
+      "ndef_rtd.test_unknown_nested_chunks_remain_opaque",
+      "ndef_rtd.test_validate_nested_chunks_report_unsupported",
+      "ndef_spec.test_chunk_writer_wire_and_logical_view",
+      "ndef_writer.test_chunk_after_record",
+      "ndef_writer.test_chunks"
+    ],
+    "ndef_writer_finish": [
+      "ndef_api.test_finish_is_observational_and_writer_recovers",
+      "ndef_api.test_items_keep_successful_prefix_on_error",
+      "ndef_features.test_core_remains_available",
+      "ndef_items.test_mixed_with_writer",
+      "ndef_items.test_same_octets_as_writer",
+      "ndef_rtd.test_di_round_trip",
+      "ndef_rtd.test_handover_records",
+      "ndef_rtd.test_handover_request_rules",
+      "ndef_rtd.test_handover_select",
+      "ndef_rtd.test_sig_covered_records",
+      "ndef_rtd.test_sp_round_trip",
+      "ndef_rtd.test_text_utf8",
+      "ndef_rtd.test_unknown_nested_chunks_remain_opaque",
+      "ndef_rtd.test_uri_prefixes",
+      "ndef_rtd.test_validate_nested_chunks_report_unsupported",
+      "ndef_spec.test_chunk_writer_wire_and_logical_view",
+      "ndef_spec.test_max_type_and_id_lengths",
+      "ndef_spec.test_nested_message_wire_and_opaque_payload",
+      "ndef_spec.test_writer_payload_size_boundaries",
+      "ndef_spec_sp.test_writer_matches_appendix_a1",
+      "ndef_spec_sp.test_writer_metadata_matches_independent_octets",
+      "ndef_spec_text.test_appendix_a_canonical_octets",
+      "ndef_spec_uri.test_appendix_a_canonical_octets",
+      "ndef_writer.test_abort",
+      "ndef_writer.test_chunk_after_record",
+      "ndef_writer.test_chunks",
+      "ndef_writer.test_flags_follow_records",
+      "ndef_writer.test_long_record_round_trip",
+      "ndef_writer.test_nested",
+      "ndef_writer.test_open_payload_long",
+      "ndef_writer.test_open_payload_short",
+      "ndef_writer.test_single_record",
+      "rtd_spec.test_binary_encoding_examples"
+    ],
+    "ndef_writer_init": [
+      "ndef_api.test_finish_is_observational_and_writer_recovers",
+      "ndef_api.test_items_keep_successful_prefix_on_error",
+      "ndef_features.test_core_remains_available",
+      "ndef_items.test_mixed_with_writer",
+      "ndef_items.test_same_octets_as_writer",
+      "ndef_rtd.test_di_round_trip",
+      "ndef_rtd.test_handover_records",
+      "ndef_rtd.test_handover_request_rules",
+      "ndef_rtd.test_handover_select",
+      "ndef_rtd.test_sig_covered_records",
+      "ndef_rtd.test_sp_round_trip",
+      "ndef_rtd.test_sp_rules",
+      "ndef_rtd.test_text_utf8",
+      "ndef_rtd.test_unknown_nested_chunks_remain_opaque",
+      "ndef_rtd.test_uri_prefixes",
+      "ndef_rtd.test_validate_nested_chunks_report_unsupported",
+      "ndef_spec.test_chunk_writer_wire_and_logical_view",
+      "ndef_spec.test_max_type_and_id_lengths",
+      "ndef_spec.test_nested_message_wire_and_opaque_payload",
+      "ndef_spec.test_writer_payload_size_boundaries",
+      "ndef_spec_sp.test_writer_matches_appendix_a1",
+      "ndef_spec_sp.test_writer_metadata_matches_independent_octets",
+      "ndef_spec_text.test_appendix_a_canonical_octets",
+      "ndef_spec_text.test_record_type_chunking_and_invalid_arguments",
+      "ndef_spec_uri.test_appendix_a_canonical_octets",
+      "ndef_spec_uri.test_record_type_chunking_and_invalid_arguments",
+      "ndef_writer.test_abort",
+      "ndef_writer.test_chunk_after_record",
+      "ndef_writer.test_chunks",
+      "ndef_writer.test_flags_follow_records",
+      "ndef_writer.test_invalid_desc",
+      "ndef_writer.test_long_record_round_trip",
+      "ndef_writer.test_nested",
+      "ndef_writer.test_nested_no_space",
+      "ndef_writer.test_no_space",
+      "ndef_writer.test_open_payload_long",
+      "ndef_writer.test_open_payload_short",
+      "ndef_writer.test_single_record",
+      "rtd_spec.test_binary_encoding_examples",
+      "rtd_spec.test_illegal_type_diagnostic_and_application_filter"
+    ],
+    "ndef_writer_len": [
+      "ndef_api.test_finish_is_observational_and_writer_recovers",
+      "ndef_rtd.test_handover_request_rules",
+      "ndef_rtd.test_sp_rules",
+      "ndef_spec_text.test_record_type_chunking_and_invalid_arguments",
+      "ndef_spec_uri.test_record_type_chunking_and_invalid_arguments",
+      "ndef_writer.test_nested_no_space",
+      "ndef_writer.test_no_space"
+    ],
+    "ndef_writer_nested_begin": [
+      "ndef_spec.test_nested_message_wire_and_opaque_payload",
+      "ndef_writer.test_nested",
+      "ndef_writer.test_nested_no_space"
+    ],
+    "ndef_writer_nested_end": [
+      "ndef_rtd.test_validate_nested_chunks_report_unsupported",
+      "ndef_spec.test_nested_message_wire_and_opaque_payload",
+      "ndef_writer.test_nested",
+      "ndef_writer.test_nested_no_space"
+    ],
+    "ndef_writer_record_abort": [
+      "ndef_api.test_finish_is_observational_and_writer_recovers",
+      "ndef_writer.test_abort"
+    ],
+    "ndef_writer_record_add": [
+      "ndef_api.test_finish_is_observational_and_writer_recovers",
+      "ndef_api.test_items_keep_successful_prefix_on_error",
+      "ndef_features.test_core_remains_available",
+      "ndef_items.test_same_octets_as_writer",
+      "ndef_rtd.test_handover_select",
+      "ndef_spec.test_max_type_and_id_lengths",
+      "ndef_spec.test_nested_message_wire_and_opaque_payload",
+      "ndef_spec.test_writer_payload_size_boundaries",
+      "ndef_writer.test_abort",
+      "ndef_writer.test_chunk_after_record",
+      "ndef_writer.test_chunks",
+      "ndef_writer.test_flags_follow_records",
+      "ndef_writer.test_invalid_desc",
+      "ndef_writer.test_long_record_round_trip",
+      "ndef_writer.test_nested",
+      "ndef_writer.test_nested_no_space",
+      "ndef_writer.test_no_space",
+      "ndef_writer.test_open_payload_long",
+      "ndef_writer.test_open_payload_short",
+      "ndef_writer.test_single_record",
+      "rtd_spec.test_binary_encoding_examples",
+      "rtd_spec.test_illegal_type_diagnostic_and_application_filter"
+    ],
+    "ndef_writer_record_begin": [
+      "ndef_api.test_finish_is_observational_and_writer_recovers",
+      "ndef_spec.test_writer_payload_size_boundaries",
+      "ndef_writer.test_abort",
+      "ndef_writer.test_open_payload_long",
+      "ndef_writer.test_open_payload_short"
+    ],
+    "ndef_writer_record_end": [
+      "ndef_api.test_finish_is_observational_and_writer_recovers",
+      "ndef_spec.test_writer_payload_size_boundaries",
+      "ndef_writer.test_abort",
+      "ndef_writer.test_open_payload_long",
+      "ndef_writer.test_open_payload_short"
+    ]
+  },
+  "coverage": {
+    "root": "../../workspace/zndef",
+    "gcovr/summary_format_version": "0.6",
+    "files": [
+      {
+        "filename": "include/ndef/ndef.h",
+        "line_total": 4,
+        "line_covered": 4,
+        "line_percent": 100.0,
+        "function_total": 2,
+        "function_covered": 2,
+        "function_percent": 100.0,
+        "branch_total": 0,
+        "branch_covered": 0,
+        "branch_percent": null
+      },
+      {
+        "filename": "src/ndef.c",
+        "line_total": 284,
+        "line_covered": 267,
+        "line_percent": 94.0,
+        "function_total": 16,
+        "function_covered": 16,
+        "function_percent": 100.0,
+        "branch_total": 261,
+        "branch_covered": 222,
+        "branch_percent": 85.1
+      },
+      {
+        "filename": "src/ndef_items.c",
+        "line_total": 58,
+        "line_covered": 50,
+        "line_percent": 86.2,
+        "function_total": 5,
+        "function_covered": 5,
+        "function_percent": 100.0,
+        "branch_total": 45,
+        "branch_covered": 32,
+        "branch_percent": 71.1
+      },
+      {
+        "filename": "src/ndef_priv.h",
+        "line_total": 23,
+        "line_covered": 23,
+        "line_percent": 100.0,
+        "function_total": 8,
+        "function_covered": 8,
+        "function_percent": 100.0,
+        "branch_total": 26,
+        "branch_covered": 24,
+        "branch_percent": 92.3
+      },
+      {
+        "filename": "src/ndef_type.c",
+        "line_total": 172,
+        "line_covered": 166,
+        "line_percent": 96.5,
+        "function_total": 16,
+        "function_covered": 16,
+        "function_percent": 100.0,
+        "branch_total": 214,
+        "branch_covered": 197,
+        "branch_percent": 92.1
+      },
+      {
+        "filename": "src/ndef_validate.c",
+        "line_total": 52,
+        "line_covered": 51,
+        "line_percent": 98.1,
+        "function_total": 3,
+        "function_covered": 3,
+        "function_percent": 100.0,
+        "branch_total": 50,
+        "branch_covered": 47,
+        "branch_percent": 94.0
+      },
+      {
+        "filename": "src/ndef_writer.c",
+        "line_total": 193,
+        "line_covered": 176,
+        "line_percent": 91.2,
+        "function_total": 15,
+        "function_covered": 15,
+        "function_percent": 100.0,
+        "branch_total": 162,
+        "branch_covered": 122,
+        "branch_percent": 75.3
+      },
+      {
+        "filename": "src/rtd_di.c",
+        "line_total": 98,
+        "line_covered": 91,
+        "line_percent": 92.9,
+        "function_total": 7,
+        "function_covered": 7,
+        "function_percent": 100.0,
+        "branch_total": 70,
+        "branch_covered": 55,
+        "branch_percent": 78.6
+      },
+      {
+        "filename": "src/rtd_handover.c",
+        "line_total": 242,
+        "line_covered": 219,
+        "line_percent": 90.5,
+        "function_total": 15,
+        "function_covered": 15,
+        "function_percent": 100.0,
+        "branch_total": 216,
+        "branch_covered": 161,
+        "branch_percent": 74.5
+      },
+      {
+        "filename": "src/rtd_sig.c",
+        "line_total": 185,
+        "line_covered": 161,
+        "line_percent": 87.0,
+        "function_total": 10,
+        "function_covered": 10,
+        "function_percent": 100.0,
+        "branch_total": 188,
+        "branch_covered": 142,
+        "branch_percent": 75.5
+      },
+      {
+        "filename": "src/rtd_sp.c",
+        "line_total": 149,
+        "line_covered": 139,
+        "line_percent": 93.3,
+        "function_total": 14,
+        "function_covered": 14,
+        "function_percent": 100.0,
+        "branch_total": 144,
+        "branch_covered": 123,
+        "branch_percent": 85.4
+      },
+      {
+        "filename": "src/rtd_text.c",
+        "line_total": 173,
+        "line_covered": 168,
+        "line_percent": 97.1,
+        "function_total": 13,
+        "function_covered": 13,
+        "function_percent": 100.0,
+        "branch_total": 166,
+        "branch_covered": 154,
+        "branch_percent": 92.8
+      },
+      {
+        "filename": "src/rtd_uri.c",
+        "line_total": 66,
+        "line_covered": 65,
+        "line_percent": 98.5,
+        "function_total": 7,
+        "function_covered": 7,
+        "function_percent": 100.0,
+        "branch_total": 64,
+        "branch_covered": 60,
+        "branch_percent": 93.8
+      },
+      {
+        "filename": "src/tlv.c",
+        "line_total": 84,
+        "line_covered": 78,
+        "line_percent": 92.9,
+        "function_total": 5,
+        "function_covered": 5,
+        "function_percent": 100.0,
+        "branch_total": 74,
+        "branch_covered": 55,
+        "branch_percent": 74.3
+      }
+    ],
+    "line_total": 1783,
+    "line_covered": 1658,
+    "line_percent": 93.0,
+    "function_total": 136,
+    "function_covered": 136,
+    "function_percent": 100.0,
+    "branch_total": 1680,
+    "branch_covered": 1394,
+    "branch_percent": 83.0
+  },
+  "coverage_environment": {
+    "os": "Linux",
+    "zephyr_version": "v4.5.0",
+    "toolchain": "zephyr/gnu",
+    "commit_date": "2026-10-28T13:40:47-07:00",
+    "run_date": "2026-10-31T23:50:09+00:00",
+    "options": {
+      "help": null,
+      "zephyr_base": null,
+      "quiet": 0,
+      "command": "twister",
+      "testsuite_root": [
+        "tests/ndef"
+      ],
+      "platform": [
+        "qemu_x86"
+      ],
+      "enable_coverage": true,
+      "coverage": true,
+      "coverage_basedir": "/workspace/zndef",
+      "coverage_platform": [
+        "qemu_x86"
+      ],
+      "coverage_formats": "html,xml,txt",
+      "inline_logs": true,
+      "outdir": "/tmp/zndef-misra-coverage"
+    }
+  },
+  "coverage_report_sha256": "b2db5614cb18adf0a6395624fe68745ea90c659efbc02493c5f881746e35728a",
+  "tool_versions": {
+    "zephyr_commit": "41d10b59730406bbab4ca9f1fbbe9e96aafb4966",
+    "sdk": "1.0.1",
+    "gcc_x86": "14.3.0",
+    "gcc_arm": "14.3.0",
+    "qemu": "10.0.2 (v10.0.2-20-g5828172dcf-dirty)",
+    "west": "1.5.0",
+    "gcovr": "8.6"
+  },
+  "misra_review": {
+    "analysis_rerun": false,
+    "original_report": "build-misra/misra_report.xml",
+    "original_report_sha256": "54acdde230ccea657ec6d38eb94f08d8c0e831ccce473096c729df5fe823a7b3",
+    "input_diagnostics": {
+      "Required": 124,
+      "Advisory": 645,
+      "Mandatory": 98
+    },
+    "review": "doc/misra-required.md",
+    "analysis_script_sha256": "be757f9146dae2eba8250cd165c5c44b6e3be6a3a20d26371a03d698325ca869"
+  }
+}

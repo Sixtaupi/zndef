@@ -1,0 +1,11 @@
+# Copyright (c) 2026 Romain Pelletant
+# SPDX-License-Identifier: Apache-2.0
+
+config TEST_NDEF_FUZZ_ROUNDS
+	int "Number of random mutation rounds"
+	default 2000
+	help
+	  Rounds of the mutation test. Raise it on a host build with
+	  AddressSanitizer.
+
+source "Kconfig.zephyr"

@@ -1,0 +1,31 @@
+common:
+  tags:
+    - nfc
+    - ndef
+  harness: ztest
+  platform_allow:
+    - qemu_x86
+    - qemu_cortex_m3
+tests:
+  libraries.zndef.features.validation_disabled:
+    extra_configs:
+      - CONFIG_ZNDEF_VALIDATE_RTD=n
+  libraries.zndef.features.opaque_rtds:
+    extra_configs:
+      - CONFIG_ZNDEF_RTD_TEXT=n
+      - CONFIG_ZNDEF_RTD_URI=n
+      - CONFIG_ZNDEF_RTD_SP=n
+      - CONFIG_ZNDEF_RTD_SIG=n
+      - CONFIG_ZNDEF_RTD_HANDOVER=n
+      - CONFIG_ZNDEF_RTD_DI=n
+  libraries.zndef.features.core_only:
+    extra_configs:
+      - CONFIG_ZNDEF_VALIDATE_RTD=n
+      - CONFIG_ZNDEF_RTD_TEXT=n
+      - CONFIG_ZNDEF_RTD_URI=n
+      - CONFIG_ZNDEF_RTD_SP=n
+      - CONFIG_ZNDEF_RTD_SIG=n
+      - CONFIG_ZNDEF_RTD_HANDOVER=n
+      - CONFIG_ZNDEF_RTD_DI=n
+      - CONFIG_ZNDEF_ITEMS=n
+      - CONFIG_ZNDEF_TLV=n

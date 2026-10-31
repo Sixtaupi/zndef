@@ -1,0 +1,116 @@
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: ci-${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  lint:
+    name: clang-format
+    runs-on: ubuntu-24.04
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@d23441a48e516b6c34aea4fa41551a30e30af803 # v6.1.0
+        with:
+          persist-credentials: false
+      - name: Install clang-format 18
+        run: |
+          sudo apt-get update
+          sudo apt-get install --no-install-recommends --yes clang-format-18
+      - name: Check C and header formatting
+        run: bash scripts/check-format.sh
+
+  build-test:
+    name: Build and test (QEMU x86 + Cortex-M3)
+    runs-on: ubuntu-24.04
+    timeout-minutes: 45
+    container:
+      image: ghcr.io/zephyrproject-rtos/ci:0.29.4@sha256:a153979984288133a478adc0bfe1081d2e1c77c2db62e9f9e48a143090913788
+    env:
+      ZEPHYR_TOOLCHAIN_VARIANT: zephyr/gnu
+    steps:
+      - uses: actions/checkout@d23441a48e516b6c34aea4fa41551a30e30af803 # v6.1.0
+        with:
+          path: zndef
+          persist-credentials: false
+      - name: Initialize Zephyr workspace
+        run: |
+          west init -l zndef
+          west update --narrow --fetch-opt=--depth=1
+          echo "ZEPHYR_SDK_INSTALL_DIR=/opt/toolchains/zephyr-sdk-$(cat zephyr/SDK_VERSION)" >> "$GITHUB_ENV"
+          west zephyr-export
+          python3 -m pip install -r zephyr/scripts/requirements.txt
+      - name: Build and run conformance tests and samples
+        working-directory: zndef
+        run: bash tests/run_conformance.sh "$GITHUB_WORKSPACE/twister-out"
+      - name: Upload test results and build logs
+        if: always()
+        uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02 # v4.6.2
+        with:
+          name: twister-results
+          path: |
+            twister-out/*.json
+            twister-out/*.xml
+            twister-out/**/*.log
+          retention-days: 14
+
+  sast:
+    name: Cppcheck and MISRA (Zephyr Cortex-M3)
+    runs-on: ubuntu-24.04
+    timeout-minutes: 45
+    container:
+      image: ghcr.io/zephyrproject-rtos/ci:0.29.4@sha256:a153979984288133a478adc0bfe1081d2e1c77c2db62e9f9e48a143090913788
+    env:
+      ZEPHYR_TOOLCHAIN_VARIANT: zephyr/gnu
+    steps:
+      - uses: actions/checkout@d23441a48e516b6c34aea4fa41551a30e30af803 # v6.1.0
+        with:
+          path: zndef
+          persist-credentials: false
+      - name: Initialize Zephyr workspace
+        run: |
+          west init -l zndef
+          west update --narrow --fetch-opt=--depth=1
+          echo "ZEPHYR_SDK_INSTALL_DIR=/opt/toolchains/zephyr-sdk-$(cat zephyr/SDK_VERSION)" >> "$GITHUB_ENV"
+          west zephyr-export
+          python3 -m pip install -r zephyr/scripts/requirements.txt
+          python3 -m pip install --require-hashes -r zndef/tools/docker/cppcheck/requirements.txt
+      - name: Build pinned Cppcheck
+        run: |
+          git clone https://github.com/RomainPelletant/cppcheck "$RUNNER_TEMP/cppcheck"
+          git -C "$RUNNER_TEMP/cppcheck" checkout 5ef5a772866c2760bb303086ee5befc3f9059564
+          cmake -S "$RUNNER_TEMP/cppcheck" -B "$RUNNER_TEMP/cppcheck/build"
+          cmake --build "$RUNNER_TEMP/cppcheck/build" --parallel 2
+          cp -R "$RUNNER_TEMP/cppcheck/cfg" "$RUNNER_TEMP/cppcheck/build/bin/cfg"
+          echo "$RUNNER_TEMP/cppcheck/build/bin" >> "$GITHUB_PATH"
+          echo "MISRA_ADDON=$RUNNER_TEMP/cppcheck/addons/misra.py" >> "$GITHUB_ENV"
+      - name: Build Zephyr sample and export compilation database
+        working-directory: zndef
+        run: |
+          west build -p always -b qemu_cortex_m3 -d build-misra/zephyr samples/ndef_tag -- \
+            -DCMAKE_EXPORT_COMPILE_COMMANDS=ON
+      - name: Analyze compiled library configuration
+        working-directory: zndef
+        run: sh scripts/check-misra.sh build-misra/zephyr/compile_commands.json
+      - name: Upload static analysis reports and configuration
+        if: always()
+        uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02 # v4.6.2
+        with:
+          name: sast-results
+          path: |
+            zndef/build-misra/*.xml
+            zndef/build-misra/*.log
+            zndef/build-misra/compile_commands.json
+            zndef/build-misra/sources.txt
+            zndef/build-misra/zephyr/compile_commands.json
+            zndef/build-misra/zephyr/zephyr/.config
+          retention-days: 14
